@@ -16,5 +16,6 @@ Average leve is 50% * Black Sole XP(+100% if preferred world) * 3 + 50% * other 
 XP from 30 to 90 is 150168400
 150168400/963629=155.8363229 leves
 So you'll need 156 leves, 2 rounds of turnin
+117 Ash Tuna, 117 Indigo Herring, 702 Black Sole per alt; 4680, 4680 and 28080 per 40 alts.
 
 

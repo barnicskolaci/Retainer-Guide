@@ -6,16 +6,18 @@ still heavily WIP
 
 # Sections
 
-- Getting started
-- Make toons
-- Level to 50 with Questionable and Questionable Companion
-- Make retainers with Henchman
-- Level retainer job to 100
-- Unlock GC rank 9
-
 # Getting started
 
+## Introduction
 The process of making retainers has a lot of components. It'll take months, but it'll set you up for life. Don't think too much about time or try to get it perfect the first time. I made this with help from many others so that you can have an easier time than we did. Just do what you can and if you change your mind, you can always level a new class or start over on a different server knowing that it'll be easier after the first. If it helps, do a test toon before you do 40, you'll learn a lot.
+
+## Roadmap
+- Figure out your goals: This is one of the most important tasks of them all. Choose your server and classes. 
+- Make toons: you can only do 8 per day so it's good to get it done early
+- Level to 50 with Questionable and Questionable Companion
+- Make retainers with Henchman
+- Level retainer job to 100, more on this later.
+- Unlock GC rank 9 with AutoHunt and [insert future script/plugin for GC rankup]
 
 ## Resources
 [Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, Lifestream and more. They'll be mentioned as needed. 
@@ -27,6 +29,20 @@ The process of making retainers has a lot of components. It'll take months, but 
  - Overseer: retainer/sub manager, uses gc missions to level any DoL and trades mats between accounts to do so.
  - Questionable Companion: for nearly all issues that stop Questionable from completing an alt
  - AutoHunt: does your (GC) hunt log to unlock the needed GC rank
+
+## Which class should I level?
+
+# Make toons
+
+## Toon creation
+
+## Unlocking retainers
+
+## Onto level 50
+
+## GC ranks
+
+# Leveling your retainer class
 
 ## Botanist/Miner
 

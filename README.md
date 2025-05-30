@@ -8,6 +8,14 @@ Unlock starting leves
 ...
 level to 30 for costa leves
 
+# Sections
+
+- Make toons
+- Level to 50 with Questionable and Questionable Companion
+- Make retainers with Henchman
+- Level DoL job to 100
+- Unlock GC rank 9
+
 ## Costa Leves
 3/4 fish can be gathered with retainers. Prioritise Black Sole in ChilledLeves
 ![image](https://github.com/user-attachments/assets/628bb8a2-3def-4809-abaf-33a1511685fb)

@@ -19,7 +19,9 @@ The process of making retainers has a lot of components. It'll take months, but 
 
 ## Resources
 [Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, Lifestream and more. They'll be mentioned as needed. 
-(F.U.T.A.)[https://github.com/Jaksuhn/SomethingNeedDoing/tree/master/Community%20Scripts/AutoRetainer%20Companions/AutoMaintenance] retainer manager, levels FSH via ocean fishing, does turnin
+
+[F.U.T.A.](https://github.com/Jaksuhn/SomethingNeedDoing/tree/master/Community%20Scripts/AutoRetainer%20Companions/AutoMaintenance) retainer manager, levels FSH via ocean fishing, does turnin
+
 [Wiggly/Friendly scripts](https://github.com/WigglyMuffin/SNDScripts/tree/main/Scripts/)
  - Character Cycler: Cycles characters before AutoRetainer can do it
  - Overseer: retainer/sub manager, uses gc missions to level any DoL and trades mats between accounts to do so.

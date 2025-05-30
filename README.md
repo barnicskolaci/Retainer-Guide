@@ -28,7 +28,7 @@ Fisher is faster, or cheaper than any other class to do. The downside is that it
 
 ### 1-30
 
-You unlock this in Limsa, do your quests till you unlock ocean fishing, then start with the Limsa leves. I'll need to check how ChilledLeves works to say what's best to get to 30. 
+You unlock FSH in Limsa, do your class quests till you unlock ocean fishing, then start with the Limsa leves. I'll need to check how ChilledLeves works to say what's best to get to 30, but it's gonna be some combination of leves. 
 
 ### 30-90: Costa Leves
 For the main bulk of levelling, the best way is to get fish with retainers and use them for Costa Del Sol leves.

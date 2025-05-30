@@ -1,6 +1,7 @@
 # Retainer-Guide
 Plans and tips for making (many) retainers in FFXIV
 by Friendly
+
 still heavily WIP
 
 # Sections

@@ -1,22 +1,35 @@
 # Retainer-Guide
-Plans and tip for making (many) retainers in FFXIV
-
-Migrated from discord
-
-Leves
-Unlock starting leves
-...
-level to 30 for costa leves
+Plans and tips for making (many) retainers in FFXIV
+by Friendly
 
 # Sections
 
+- Getting started
 - Make toons
 - Level to 50 with Questionable and Questionable Companion
 - Make retainers with Henchman
-- Level DoL job to 100
+- Level retainer job to 100
 - Unlock GC rank 9
 
-## Costa Leves
+# Getting started
+
+## Resources
+Futa ret manager, levels FSH via ocean fishing
+Overseer (& others) ret/sub manager, uses gc missions to level any DoL
+Hunt log doer gc rank, bit jank but mostly ok.
+
+## Botanist/Miner
+
+## Fisher
+
+Fisher is faster, or cheaper than any other class to do. The downside is that it has basically no use outside of quick ventures. If you have no subs and don't care too much this is probably your class.
+
+### 1-30
+
+You unlock this in Limsa, do your quests till you unlock ocean fishing, then start with the Limsa leves. I'll need to check how ChilledLeves works to say what's best to get to 30. 
+
+### 30-90: Costa Leves
+For the main bulk of levelling, the best way is to get fish with retainers and use them for Costa Del Sol leves.
 3/4 fish can be gathered with retainers. Prioritise Black Sole in ChilledLeves
 ![image](https://github.com/user-attachments/assets/628bb8a2-3def-4809-abaf-33a1511685fb)
 Average leve is 50% × Black Sole XP(+100% if preferred world) × 3 + 50% × other XP(+100% if preferred world)
@@ -35,3 +48,47 @@ Since 1/6th of the time you can choose between Tuna and Herring you can shift Tu
 
 This is good cause Tuna can be gathered faster with retainers, so make you AR venture plan like so.
 ![image](https://github.com/user-attachments/assets/6514a076-b631-4433-961c-5ed26bd675e7)
+
+### Any level: Ocean Fishing
+
+If for some reason leves are no longer viable for you, either cause you've hit 90, don't have fish or gil to buy it, or anything else, ocean fishing is a good way to level.
+Every 2 hours you can do it for 22 min, use F.U.T.A or some other script to start it when it's up and fish with AutoHook from puni.sh using the presets. The downside is it's only every 2 hours, so solely relying on this for levelling will add about day per toon until you're done, but it is completely afk at least.
+![image](https://github.com/user-attachments/assets/6c9f87ef-742b-48dc-a4b8-6b00bf3bc3f1)
+
+## Combat
+
+### Miscellanious
+
+#### How many Ocean Fishing boats from 1-100?
+ 
+Strongly recommended to go on boats at 80+ or even 90 while using costa leves from fish from retainers. But if you can't find/make the fish needed, here's how I'd do it.
+With preferred world bonus, I did it with about 20-26 total leves (to ~lvl 45) plus 18ish boats. Without leves its about 23 boats.
+Starting limsa leves till level 20 using fish bought from vendor (Lominsan Anchovy, finger shrimp and coral butterfly).
+Quarrymill leves to lvl 45-50 (or 30 with Costa leves) (all but black ghost are usually ok price).
+Then ocean fish to 100. Things that help - in order of importance - cordials, rng, gp from gear, food.
+A typical result without anything looks like  1 - 11 - 21 - 31 - 39 - 45 - 50 - 55 - 59 - 63 - 67 - 70 - 73 - 76 - 79 - 82 - 85 - 88 - 90 - 92 - 94 - 96 - 98 - 100
+
+#### Info on rankings
+Based on my toons with 9 retainers you cap out on ~1.2m seals/week or 5.2m /month. That lands you around 10th place for gc ranking on low pop OCE servers, and only lower anywhere else.
+
+#### Numbers and stuff:
+
+Gil per quick venture (7.2):
+720 = 1200 x 0.6 from seals
+2910 = 3% x 9.7% x 2 x 500k from dyes
+3630/qv or 2.65m/month
+
+If you wanna spend time selling fc points, they are worth 1-2 gil via cereleum tank. you can get 2 depending on buyer, but for simplicity, let's say 1. Don't buy anything else with them to sell, there's no market.
+529 = 529 x 1 fc points
+4159/qv or 3.04m/month
+
+On top of this you will also get items to sell, most of which are going to be vendored, because it's a hassle to sell manually. Just add anything worth less than 20k-50k to your AR sell list.
+
+Speed:
+Your handling time will depend on a bunch of factors: login queue, AR settings and enabled features, ping, fps. But ballpark figures for me on an old pc are: 
+Relog: avg. 55 seconds (40-80 s), retainer: avg. 7.5 s, or 70 s total for 2 retainers. Turnin takes 1.16 s/retainer, more on this below. So with a 40x2 army you should complete a cycle in less than 48 minutes (40* (55 +2 * (7.5+1.16))/60) which means your retainers are fully efficient and can fit more into an hour.
+
+If you're slower than these numbers, minimise your game and try to raise fps, disable plugins.
+
+Turnin: Again, depends, so ballpark. With proper inventory management (ie. AR unconditional sell list and periodic cleaning) you need turnin after about 750 qv (inventory + armory is 530 slots, some used for stuff to be sold makes it ~500, with ~66% of getting turnin gear, that'll fill in 750 qv). Turnin takes about 15 min, that's 1.16 s (15 x 60/750) for each qv. With only 2 retainers you should need it every 15.6 days (750/2/24). With more retainers, it's more frequent, but even with 10 total retainers it'll be an extra 11.6 s which is ~9% of the expected runtime of 130 s (55+10 x 7.5).
+There's actually a reason to do it more frequently, since items from last patch have a higher chance of dropping, which are worth more seals. I don't know the maths on this, and I don't think it's really worth digging into, but there may be merit to doing turnin more frequently, like right after your armoury is full. It won't eat into your efficiency.

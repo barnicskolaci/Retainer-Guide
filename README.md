@@ -20,7 +20,7 @@ The process of making retainers has a lot of components. It'll take months, but 
 - Unlock GC rank 9 with AutoHunt and [insert future script/plugin for GC rankup]
 
 ## Resources
-[Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, Lifestream and more. They'll be mentioned as needed. 
+[Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, SomethingNeedDoing, Lifestream, and more. They'll be mentioned as needed. 
 
 [F.U.T.A.](https://github.com/Jaksuhn/SomethingNeedDoing/tree/master/Community%20Scripts/AutoRetainer%20Companions/AutoMaintenance) retainer manager, levels FSH via ocean fishing, does turnin
 
@@ -31,6 +31,17 @@ The process of making retainers has a lot of components. It'll take months, but 
  - AutoHunt: does your (GC) hunt log to unlock the needed GC rank
 
 ## Which class should I level?
+
+## Setup
+
+Plugins: Dalamud Plugin Installer - Settings - Experimental - scroll down - Custom plugin repositories. Add the repo links to a new line, press plus, click save. Then install the plugin from the installer.
+Extra for SND (SomethingNeedDoing): While you're there, you'll need to enable testing builds ![image](https://github.com/user-attachments/assets/cdaac55c-a7cd-4238-bba1-908cc1669568)
+Once you have SND installed, right click, get the testing version ![image](https://github.com/user-attachments/assets/274dba6c-0f55-4b59-8689-8f48311b71f7)
+
+Scripts: These will tell you usually in both the script itself and on the github page what they need. Read the requirements and don't forget to set the settings within the script. 
+For setting config folder for AutoHunt: Open SND. Click help, click options on the help window.
+![image](https://github.com/user-attachments/assets/bbd6f2f7-a80d-4797-a5d9-2c1e92acfa7d)
+You can also set a script to run after AR under AutoRetainer. 
 
 # Make toons
 

@@ -35,8 +35,11 @@ The process of making retainers has a lot of components. It'll take months, but 
 ## Setup
 
 Plugins: Dalamud Plugin Installer - Settings - Experimental - scroll down - Custom plugin repositories. Add the repo links to a new line, press plus, click save. Then install the plugin from the installer.
-Extra for SND (SomethingNeedDoing): While you're there, you'll need to enable testing builds ![image](https://github.com/user-attachments/assets/cdaac55c-a7cd-4238-bba1-908cc1669568)
-Once you have SND installed, right click, get the testing version ![image](https://github.com/user-attachments/assets/274dba6c-0f55-4b59-8689-8f48311b71f7)
+Extra for SND (SomethingNeedDoing): While you're there, you'll need to enable testing builds 
+![image](https://github.com/user-attachments/assets/cdaac55c-a7cd-4238-bba1-908cc1669568)
+
+Once you have SND installed, right click, get the testing version 
+![image](https://github.com/user-attachments/assets/274dba6c-0f55-4b59-8689-8f48311b71f7)
 
 Scripts: These will tell you usually in both the script itself and on the github page what they need. Read the requirements and don't forget to set the settings within the script. 
 For setting config folder for AutoHunt: Open SND. Click help, click options on the help window.

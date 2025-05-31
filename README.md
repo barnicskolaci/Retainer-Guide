@@ -35,7 +35,8 @@ The process of making retainers has a lot of components. It'll take months, but 
 ## Setup
 
 Plugins: Dalamud Plugin Installer - Settings - Experimental - scroll down - Custom plugin repositories. Add the repo links to a new line, press plus, click save. Then install the plugin from the installer.
-Extra for SND (SomethingNeedDoing): While you're there, you'll need to enable testing builds 
+Extra for SND (SomethingNeedDoing): While you're there, you'll need to enable testing builds
+
 ![image](https://github.com/user-attachments/assets/cdaac55c-a7cd-4238-bba1-908cc1669568)
 
 Once you have SND installed, right click, get the testing version 

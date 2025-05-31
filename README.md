@@ -45,6 +45,7 @@ Once you have SND installed, right click, get the testing version
 Scripts: These will tell you usually in both the script itself and on the github page what they need. Read the requirements and don't forget to set the settings within the script. 
 For setting config folder for AutoHunt: Open SND. Click help, click options on the help window.
 ![image](https://github.com/user-attachments/assets/bbd6f2f7-a80d-4797-a5d9-2c1e92acfa7d)
+
 You can also set a script to run after AR under AutoRetainer. 
 
 # Make toons

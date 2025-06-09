@@ -115,6 +115,17 @@ Based on my toons with 9 retainers you cap out on ~1.2m seals/week or 5.2m /mont
 
 #### Numbers and stuff:
 
+Gil per quick venture (7.25):
+SE decided OC should give you old expensive items :'( This means while ppl are farming that, the price of dyes went down by 30-50%. You can still sell them if you want or hold onto your venture coffers until the price goes back up.
+
+720 = 1200 x 0.6 from seals
+1745 = 3% x 9.7% x 2 x 300k from dyes
+2465/qv or 1.80m/month
+
+If you wanna spend time selling fc points, they are worth 1-2 gil via **cereleum tank**. you can get 2 depending on buyer, but for simplicity, let's say 1. Don't buy anything else with them to sell, there's no market.
+529 = 529 x 1 fc points
+2994/qv or 2.19m/month
+
 Gil per quick venture (7.2):
 720 = 1200 x 0.6 from seals
 2910 = 3% x 9.7% x 2 x 500k from dyes

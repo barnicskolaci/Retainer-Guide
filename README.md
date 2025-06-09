@@ -131,8 +131,7 @@ Gil per quick venture (7.2):
 2910 = 3% x 9.7% x 2 x 500k from dyes
 3630/qv or 2.65m/month
 
-If you wanna spend time selling fc points, they are worth 1-2 gil via cereleum tank. you can get 2 depending on buyer, but for simplicity, let's say 1. Don't buy anything else with them to sell, there's no market.
-529 = 529 x 1 fc points
+With FC points: 529 = 529 x 1 fc points
 4159/qv or 3.04m/month
 
 On top of this you will also get items to sell, most of which are going to be vendored, because it's a hassle to sell manually. Just add anything worth less than 20k-50k to your AR sell list.

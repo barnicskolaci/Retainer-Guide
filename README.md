@@ -11,7 +11,7 @@ still heavily WIP
 ## Introduction
 The process of making retainers has a lot of components. It'll take months, but it'll set you up for life. Don't think too much about time or trying to get it perfect the first time. I made this with help from many others so that you can have an easier time than we did. Just do what you can and if you change your mind, you can always level a new class or start over on a different server knowing that it'll be easier after the first. If it helps, do a test toon before you do 40, you'll learn a lot.
 
-## Roadmap
+## Overview
 - Figure out your goals: This is one of the most important tasks of them all. Do you want submersibles too? Choose your server and classes accordingly.
 - Make toons: you can only do 8 per day so it's good to get it done early
 - Level to 50 with Questionable and Questionable Companion

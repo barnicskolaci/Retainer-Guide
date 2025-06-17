@@ -13,7 +13,7 @@ The process of making retainers has a lot of components. It'll take months, but 
 
 ## Overview
 - Figure out your goals: This is one of the most important tasks of them all. Do you want submersibles too? Choose your server and classes accordingly.
-- Make toons: you can only do 8 per day so it's good to get it done early
+- Make toons: you can only do 8 per day
 - Level to 50 with Questionable and Questionable Companion
 - Make retainers with Henchman
 - Level retainer job to 100, more on this later.

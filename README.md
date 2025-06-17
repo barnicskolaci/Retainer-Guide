@@ -228,48 +228,47 @@ If you're slower than these numbers, minimise your game and try to raise fps, di
 
 EU/Light
 
-![image](https://github.com/user-attachments/assets/de3b5486-bd1d-42fa-864b-2e187b33db7c)
+![image](https://github.com/user-attachments/assets/7762ad04-2bd7-4e47-8265-2e006d5805a7)
 
 EU/Chaos
 
-![image](https://github.com/user-attachments/assets/ca5d18db-a0f8-4350-8e5e-996702c91c99)
+![image](https://github.com/user-attachments/assets/31f17dfd-a3be-4983-85a1-8fa4a46575be)
 
 NA/Aether
 
-![image](https://github.com/user-attachments/assets/c618d329-6f52-4bb0-ba26-81830cb04ef7)
+![image](https://github.com/user-attachments/assets/b713d72e-2b00-4374-a62e-122ef53f627e)
 
 NA/Primal
 
-![image](https://github.com/user-attachments/assets/161f662a-86e8-4c31-9300-3e3ac74b500c)
+![image](https://github.com/user-attachments/assets/f0bd658f-4e07-4f0e-af27-830fe1df5841)
 
 NA/Crystal
 
-![image](https://github.com/user-attachments/assets/ab2a73c5-ed62-4663-89aa-97d55eedf719)
-
+![image](https://github.com/user-attachments/assets/69825381-463e-47ac-a3d7-a6fcc57bca42)
 
 NA/Dynamis
 
-![image](https://github.com/user-attachments/assets/c26da5ad-3c72-4584-9383-e054aeeb1638)
+![image](https://github.com/user-attachments/assets/34e82bd8-1972-4d23-986c-091a499ea120)
 
 JP/Elemental
 
-![image](https://github.com/user-attachments/assets/1436311b-ea98-48f1-a29f-87fda4e6373f)
+![image](https://github.com/user-attachments/assets/be8fd9c4-f2f8-45e5-a7ba-4e03a5358100)
 
 JP/Gaia
 
-![image](https://github.com/user-attachments/assets/fad514fb-cd63-4769-a053-71a4993a62bf)
+![image](https://github.com/user-attachments/assets/885e51d0-eb19-4f0e-a2db-a541a7ff137e)
 
 JP/Mana
 
-![image](https://github.com/user-attachments/assets/7d98e1aa-8b45-4fd0-a91d-4157ae7ebaea)
+![image](https://github.com/user-attachments/assets/d6c778f4-5d1b-4fec-b88d-b76a1c19a260)
 
 JP/Meteor
 
-![image](https://github.com/user-attachments/assets/1564e4d6-45a1-44a3-a8e4-5e4aeeee6cf2)
+![image](https://github.com/user-attachments/assets/9808eb0b-0526-4315-8891-066279232292)
 
 OCE/Materia
 
-![image](https://github.com/user-attachments/assets/6237201d-3bc6-46d4-8725-b7618b8171a6)
+![image](https://github.com/user-attachments/assets/99762d26-820c-485a-9d6a-8a30584ca2a7)
 
 
 Turnin: Again, depends, so ballpark. With proper inventory management (ie. AR unconditional sell list and periodic cleaning) you need turnin after about 750 qv (inventory + armory is 530 slots, some used for stuff to be sold makes it ~500, with ~66% of getting turnin gear, that'll fill in 750 qv). Turnin takes about 15 min, that's 1.16 s (15 x 60/750) for each qv. With only 2 retainers you should need it every 15.6 days (750/2/24). With more retainers, it's more frequent, but even with 10 total retainers it'll be an extra 11.6 s which is ~9% of the expected runtime of 130 s (55+10 x 7.5).

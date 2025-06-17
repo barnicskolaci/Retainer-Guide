@@ -31,11 +31,13 @@ The process of making retainers has a lot of components. It'll take months, but 
 
 ## Overview
 The overall process can be broken down into these parts:
+Please note the order isn't .  
 - Figure out your goals: This is one of the most important tasks of them all. How many toons? Do you want submersibles too? Choose accordingly.
 - Level toons to 50
 - Make retainers
-- Level retainer job to 100
-- (Optional with subs) Unlock GC rank 9
+- Level retainer job and retainers to 100
+- (Optional) Unlock GC rank 9
+- (Optional) Make FCs
 
 ## Resources
 [Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, SomethingNeedDoing, Lifestream, and more. They'll be mentioned as needed.
@@ -65,7 +67,11 @@ toon: Character
 
 ## Practical considerations
 
-If you want subs
+If you want subs, you should look for a server with housing availability. Check [PaissaDB](https://zhu.codes/paissa)
+Login time: Unless you're playing on a dead server, chances are you'll mostly have a 30s queue time. If you want to wait less, and don't mind checking some stuff, read further.
+Login time works like this: the game updates the queue every 30s. If there's no queue, you get in. So, wether the queue is 1 or 100, you're still waiting 30s. If there's no queue, then you don't wait. Waitingway tracks login queues, you can find the data [here](https://grafana.camora.dev/d/adkjhur7scc1sf/waitingway?orgId=1&refresh=5m) (page takes a while to load). Select something sensible like 7 days and find the graph titled Queue Size for your DC of interest, click icon in the top right corner, inspect, Data, download csv. Now, to interpret that csv data file I 'made' a [lil tool](https://claude.ai/public/artifacts/63988bc0-3bb8-4a26-8845-b21fc35b382d). Pull the csv file into it and it'll give you the average login time.
+Mind you these numbers are not accurate, because the sample from Waitingway is more populated near busy times. But it's still good for a relative comparison.
+For the sake of convenience you can find the times as of 17 JUN 2025 [here](#login-times)
 How many are you making: retainer/toon
 If you have entry subscription
 Starting funds
@@ -189,6 +195,34 @@ Your handling time will depend on a bunch of factors: login queue, AR settings a
 Relog: avg. 55 seconds (40-80 s), retainer: avg. 7.5 s, or 70 s total for 2 retainers. Turnin takes 1.16 s/retainer, more on this below. So with a 40x2 army you should complete a cycle in less than 48 minutes (40* (55 +2 * (7.5+1.16))/60) which means your retainers are fully efficient and can fit more into an hour.
 
 If you're slower than these numbers, minimise your game and try to raise fps, disable plugins.
+
+#### Login times
+EU/Light
+
+![image](https://github.com/user-attachments/assets/de3b5486-bd1d-42fa-864b-2e187b33db7c)
+
+EU/Chaos
+
+![image](https://github.com/user-attachments/assets/ca5d18db-a0f8-4350-8e5e-996702c91c99)
+
+NA/Aether
+
+![image](https://github.com/user-attachments/assets/c618d329-6f52-4bb0-ba26-81830cb04ef7)
+
+NA/Primal
+
+![image](https://github.com/user-attachments/assets/161f662a-86e8-4c31-9300-3e3ac74b500c)
+
+NA/Crystal
+
+![image](https://github.com/user-attachments/assets/ab2a73c5-ed62-4663-89aa-97d55eedf719)
+
+
+NA/Dynamis
+
+![image](https://github.com/user-attachments/assets/c26da5ad-3c72-4584-9383-e054aeeb1638)
+
+
 
 Turnin: Again, depends, so ballpark. With proper inventory management (ie. AR unconditional sell list and periodic cleaning) you need turnin after about 750 qv (inventory + armory is 530 slots, some used for stuff to be sold makes it ~500, with ~66% of getting turnin gear, that'll fill in 750 qv). Turnin takes about 15 min, that's 1.16 s (15 x 60/750) for each qv. With only 2 retainers you should need it every 15.6 days (750/2/24). With more retainers, it's more frequent, but even with 10 total retainers it'll be an extra 11.6 s which is ~9% of the expected runtime of 130 s (55+10 x 7.5).
 There's actually a reason to do it more frequently, since items from last patch have a higher chance of dropping, which are worth more seals. I don't know the maths on this, and I don't think it's really worth digging into, but there may be merit to doing turnin more frequently, like right after your armoury is full. It won't eat into your efficiency.

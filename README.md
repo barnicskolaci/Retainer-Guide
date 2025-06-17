@@ -2,50 +2,73 @@
 Plans and tips for making (many) retainers in FFXIV
 by Friendly
 
-still heavily WIP
+still heavily work in progress
 
 # Sections
-[Introduction](#Introduction)
-   - [GC Supply Scripts](#gc-supply-scripts)
-   - [Job Unlocker](#job-unlocker)
-   - [AutoHunt](#autohunt)
-   - [Overseer](#overseer)
-   - [Questionable Companion](#questionable-companion)
-   - [Retainer Maker](#retainer-maker)
-   - [Tools](#tools)
-   - [Trading Scripts](#trading-scripts)
-   - [Character Cycler](#character-cycler)
-   - [Retired Scripts](#retired-scripts)
-4. [Planned Changes](#planned-changes)
-5. [Installation](#installation)
-6. [License](#license)
-# Getting started
+1.0 [Getting started](#Getting-started)
+   - 1.1 [Overview](#Overview)
+   - 1.2 [Resources](#Resources)
+   - 1.3 [Glossary](#Glossary)
+   - 1.4 [Practical Considerations](#Practical-considerations)
+   - 1.5 [Setup](#setup)
+2.0 [Road to 50](#road-to-50)
+   - 2.1 [Toon creation](#Toon-creation)
+   - 2.2 [Early levels](#Early-levels)
+   - 2.3 [Unlocking retainers](#Unlocking-retainers)
+   - 2.4 [Onto level 50](#Onto-level-50)
+   - 2.5 [GC ranks](#GC-ranks)
+3.0 [Leveling your retainer class](#Leveling-your-retainer-class)
+   - 3.1 [Botanist/Miner](#Botanist/Miner)
+   - 3.2 [Fisher](#Fisher)
+   - 3.3 [Combat](#Combat)
+4.0 [Retainer management](#Retainer-management)
+5.0 [Miscellaneous](#Miscellaneous)
 
-## Introduction
+
+
+# Getting started
 The process of making retainers has a lot of components. It'll take months, but it'll set you up for life. Don't think too much about time or trying to get it perfect the first time. I made this with help from many others so that you can have an easier time than we did. Just do what you can and if you change your mind, you can always level a new class or start over on a different server knowing that it'll be easier after the first. If it helps, do a test toon before you do 40, you'll learn a lot.
 
 ## Overview
+The overall process can be broken down into these parts:
 - Figure out your goals: This is one of the most important tasks of them all. How many toons? Do you want submersibles too? Choose accordingly.
-- Make toons: you can only do 8 per day so max it out until you've made enough characters
-- Level to 50 with Questionable and qst Companion script
-- Make retainers with Henchman
-- Level retainer job to 100, more on this later.
-- Unlock GC rank 9 with AutoHunt
+- Level toons to 50
+- Make retainers
+- Level retainer job to 100
+- (Optional with subs) Unlock GC rank 9
 
 ## Resources
 [Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, SomethingNeedDoing, Lifestream, and more. They'll be mentioned as needed.
 
-[Henchman](Henchman repo will go here)
+[Henchman](https://raw.githubusercontent.com/Knightmore/Henchman/main/repo.json)
 
-[F.U.T.A.](https://github.com/Jaksuhn/SomethingNeedDoing/tree/master/Community%20Scripts/AutoRetainer%20Companions/AutoMaintenance) retainer manager, levels FSH via ocean fishing, does turnin
+(Optional)[F.U.T.A.](https://github.com/Jaksuhn/SomethingNeedDoing/tree/master/Community%20Scripts/AutoRetainer%20Companions/AutoMaintenance) retainer manager, levels FSH via ocean fishing, does turnin
 
 [Wiggly/Friendly scripts](https://github.com/WigglyMuffin/SNDScripts/tree/main/Scripts/)
  - Character Cycler: Runs a script on a list of characters before AutoRetainer can do it
- - Overseer: retainer/sub manager, uses gc missions to level any DoL and trades mats between accounts to do so.
+ - (Optional)Overseer: retainer/sub manager, uses gc missions to level any DoL and trades mats between accounts to do so.
  - Questionable Companion: for nearly all issues that stop Questionable from completing an alt
- - AutoHunt: does your (GC) hunt log and dungeons/quests and ranks up to the rank 9 for duck bones
+ - (Optional)AutoHunt: does your (GC) hunt log and dungeons/quests and ranks up to the rank 9 for duck bones
+   
+## Glossary
 
-## Which class should I level?
+ar: AutoRetainer
+ad: Autoduty
+fc: Free Company
+gc: Grand Company
+post-process: AR can do a few things after it finished a toon, such as starting a script. See [Resources](#resources) for more.
+qst: Questionable
+qv: Quick Venture
+snd: SomethingNeedDoing
+sub: Submersible (in FC workshop)
+toon: Character
+
+## Practical considerations
+
+If you want subs
+How many are you making: retainer/toon
+If you have entry subscription
+Starting funds
 
 ## Setup
 
@@ -63,7 +86,7 @@ For setting config folder for AutoHunt: Open SND. Click help, click options on t
 
 You can also set a script to run after AR under AutoRetainer. 
 
-# Make toons
+# Road to 50
 
 ## Toon creation
 
@@ -115,12 +138,16 @@ Every 2 hours you can do it for 22 min, use F.U.T.A or some other script to star
 ## Combat
 
 Just run Qst and companion script till it doesn't work anymore teehee.
-No, but for real, I don't recommend this cause:
+No, but for real, I don't recommend this because it:
     - takes the most manual work (crystal tower+wherever msq isn't fully auto)
     - takes the longest time (like 5 days/toon)
-    - doesn't give that much more for you (daily maps, EW leves, doman enclave, easier gearing for hq crafted gear from qv)
+    - doesn't give that much more for you (daily maps, EW leves, doman enclave, non qv rewards, free retainer gear)
+    
+If despite this you want to do it, more power to you. Some people enjoy doing multiple MSQ runs, some want mats from combat retainers.
 
-### Miscellanious
+# Retainer management
+
+# Miscellanious
 
 #### How many Ocean Fishing boats from 1-100?
  
@@ -165,12 +192,3 @@ If you're slower than these numbers, minimise your game and try to raise fps, di
 
 Turnin: Again, depends, so ballpark. With proper inventory management (ie. AR unconditional sell list and periodic cleaning) you need turnin after about 750 qv (inventory + armory is 530 slots, some used for stuff to be sold makes it ~500, with ~66% of getting turnin gear, that'll fill in 750 qv). Turnin takes about 15 min, that's 1.16 s (15 x 60/750) for each qv. With only 2 retainers you should need it every 15.6 days (750/2/24). With more retainers, it's more frequent, but even with 10 total retainers it'll be an extra 11.6 s which is ~9% of the expected runtime of 130 s (55+10 x 7.5).
 There's actually a reason to do it more frequently, since items from last patch have a higher chance of dropping, which are worth more seals. I don't know the maths on this, and I don't think it's really worth digging into, but there may be merit to doing turnin more frequently, like right after your armoury is full. It won't eat into your efficiency.
-
-# Glossary
-
-sub: Submersible (in FC workshop)
-fc: Free Company
-gc: Grand Company
-qst: Questionable
-qv: Quick Venture
-toon: Character

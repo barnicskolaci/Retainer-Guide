@@ -25,10 +25,10 @@ The process of making retainers has a lot of components. It'll take months, but 
 [F.U.T.A.](https://github.com/Jaksuhn/SomethingNeedDoing/tree/master/Community%20Scripts/AutoRetainer%20Companions/AutoMaintenance) retainer manager, levels FSH via ocean fishing, does turnin
 
 [Wiggly/Friendly scripts](https://github.com/WigglyMuffin/SNDScripts/tree/main/Scripts/)
- - Character Cycler: Cycles characters before AutoRetainer can do it
+ - Character Cycler: Runs a script on a list of characters before AutoRetainer can do it
  - Overseer: retainer/sub manager, uses gc missions to level any DoL and trades mats between accounts to do so.
  - Questionable Companion: for nearly all issues that stop Questionable from completing an alt
- - AutoHunt: does your (GC) hunt log to unlock the needed GC rank
+ - AutoHunt: does your (GC) hunt log and dungeons/quests and ranks up to the rank 9 for duck bones
 
 ## Which class should I level?
 

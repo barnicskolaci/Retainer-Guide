@@ -17,7 +17,7 @@ The process of making retainers has a lot of components. It'll take months, but 
 - Level to 50 with Questionable and Questionable Companion
 - Make retainers with Henchman
 - Level retainer job to 100, more on this later.
-- Unlock GC rank 9 with AutoHunt and [insert future script/plugin for GC rankup]
+- Unlock GC rank 9 with AutoHunt
 
 ## Resources
 [Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, SomethingNeedDoing, Lifestream, and more. They'll be mentioned as needed. 

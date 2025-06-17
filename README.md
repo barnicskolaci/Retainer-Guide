@@ -55,7 +55,7 @@ Warning: as of 17Jun2025 old SND scripts must be used in SND Legacy or rewritten
  - (Optional)AutoHunt: does your (GC) hunt log and dungeons/quests and ranks up to the rank 9 for duck bones
    
 ## Glossary
-```
+
 ar: AutoRetainer
 ad: Autoduty
 fc: Free Company
@@ -66,7 +66,7 @@ qv: Quick Venture
 snd: SomethingNeedDoing
 sub: Submersible (in FC workshop)
 toon: Character
-```
+
 
 ## Practical considerations
 

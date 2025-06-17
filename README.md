@@ -5,7 +5,20 @@ by Friendly
 still heavily WIP
 
 # Sections
-
+[Introduction](#Introduction)
+   - [GC Supply Scripts](#gc-supply-scripts)
+   - [Job Unlocker](#job-unlocker)
+   - [AutoHunt](#autohunt)
+   - [Overseer](#overseer)
+   - [Questionable Companion](#questionable-companion)
+   - [Retainer Maker](#retainer-maker)
+   - [Tools](#tools)
+   - [Trading Scripts](#trading-scripts)
+   - [Character Cycler](#character-cycler)
+   - [Retired Scripts](#retired-scripts)
+4. [Planned Changes](#planned-changes)
+5. [Installation](#installation)
+6. [License](#license)
 # Getting started
 
 ## Introduction

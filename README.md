@@ -31,13 +31,13 @@ The process of making retainers has a lot of components. It'll take months, but 
 
 ## Overview
 The overall process can be broken down into these parts:
-Please note the order isn't .  
+Please note you don't have to finish one step on all toons before starting the next one.  
 - Figure out your goals: This is one of the most important tasks of them all. How many toons? Do you want submersibles too? Choose accordingly.
-- Level toons to 50
+- Level toon to 50
 - Make retainers
 - Level retainer job and retainers to 100
 - (Optional) Unlock GC rank 9
-- (Optional) Make FCs
+- (Optional) Make FC
 
 ## Resources
 [Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, SomethingNeedDoing, Lifestream, and more. They'll be mentioned as needed.
@@ -69,16 +69,6 @@ toon: Character
 
 ## Practical considerations
 
-### Subs
-If you want subs, you should look for a server with housing availability. Check [PaissaDB](https://zhu.codes/paissa) and/or ask sublords in #housing-deployables in the Punish discord.
-
-### Login time
-Unless you're playing on a dead server, chances are you'll mostly have a 30s queue time. If you don't wanna min/max, I recommend choosing the server with the best ping. If you want to potentially save time on login, and don't mind checking some stuff, read further.
-Login time works like this:  If there's no queue, you get in and the game updates the queue every 30s. So, wether the queue is 1 or 100, you're still waiting 30s. If there's no queue, then you don't wait. Waitingway tracks login queues, you can find the data [here](https://grafana.camora.dev/d/adkjhur7scc1sf/waitingway?orgId=1&refresh=5m) (page takes a while to load and you need to scroll down). Select something sensible like 7 days at the top and find the graph titled Queue Size for your DC of interest, click icon in the top right corner, inspect, Data, download csv. Now, to interpret that csv data file I 'made' a [lil tool](https://claude.ai/public/artifacts/ef71b600-aaa9-412a-bdde-10314a6bfbbb). Pull the csv file into it and it'll give you the average login times.
-Mind you these numbers are not accurate, because the sample from Waitingway is more populated near busy times. But it's still good for a relative comparison.
-Now - before you all flock to OCE - AR, Deliveroo and manual things that you want to do will take longer due to ping which somewhat counteracts the time save on login. For me personally from EU that basically means I save next to nothing by being on OCE, but your mileage may vary.
-For the sake of convenience you can find the login time of the last 30 days as of 17 JUN 2025 [here](#login-times)
-
 ### How many toons to make
 Generally speaking you want your toons to be processed in a little over an hour even at the best times. TLDR: make 40 and adjust as needed.
 
@@ -88,6 +78,20 @@ If you wanna think ahead, you can measure how quickly you log in and process rea
 my numbers 3600/(55+retainers*6) = no. of toons
 ```
 Your overall processing time will vary due to login queue, fps, ping and what other management tasks AR is doing, but whatever the formula give you or 40 is a good estimate.
+
+### Subs
+If you want subs, you should look for a server with housing availability. Check [PaissaDB](https://zhu.codes/paissa) and/or ask sublords in #housing-deployables in the Punish discord.
+
+### FCs
+
+You can skip making FCs for your new toon if you don't need subs, but I'd recommend doing it anyway cause you'll then get an extra ~20% gil by selling company credits via cereleum tank at some point. You'll ofc need a 2nd acc for a month to make the FCs. See [Numbers and stuff](#Numbers-and-stuff).
+
+### Login time
+Unless you're playing on a dead server, chances are you'll mostly have a 30s queue time. If you don't wanna min/max, I recommend choosing the server with the best ping. If you want to potentially save time on login, and don't mind checking some stuff, read further.
+Login time works like this:  If there's no queue, you get in and the game updates the queue every 30s. So, wether the queue is 1 or 100, you're still waiting 30s. If there's no queue, then you don't wait. Waitingway tracks login queues, you can find the data [here](https://grafana.camora.dev/d/adkjhur7scc1sf/waitingway?orgId=1&refresh=5m) (page takes a while to load and you need to scroll down). Select something sensible like 7 days at the top and find the graph titled Queue Size for your DC of interest, click icon in the top right corner, inspect, Data, download csv. Now, to interpret that csv data file I 'made' a [lil tool](https://claude.ai/public/artifacts/ef71b600-aaa9-412a-bdde-10314a6bfbbb). Pull the csv file into it and it'll give you the average login times.
+Mind you these numbers are not accurate, because the sample from Waitingway is more populated near busy times. But it's still good for a relative comparison.
+Now - before you all flock to OCE - AR, Deliveroo and manual things that you want to do will take longer due to ping which somewhat counteracts the time save on login. For me personally from EU that basically means I save next to nothing by being on OCE, but your mileage may vary.
+For the sake of convenience you can find the login time of the last 30 days as of 17 JUN 2025 [here](#login-times)
 
 ### Entry subscription
 You can get away with 8 toon/DC, but you'll be limited to ~30 toons so I get as many retainers as you can afford (except maybe the premium app one). If you plan on having 4 or fewer retainers/toon, I'd recommend upgrading your subscripion as you'll have a bunch of downtime within an hour.
@@ -178,7 +182,7 @@ If despite this you want to do it, more power to you. Some people enjoy doing mu
 
 # Miscellanious
 
-#### How many Ocean Fishing boats from 1-100?
+## How many Ocean Fishing boats from 1-100?
  
 Strongly recommended to go on boats at 80+ or even 90 while using costa leves from fish from retainers. But if you can't find/make the fish needed, here's how I'd do it.
 With preferred world bonus, I did it with about 20-26 total leves (to ~lvl 45) plus 18ish boats. Without leves its about 23 boats.
@@ -187,10 +191,10 @@ Quarrymill leves to lvl 45-50 (or 30 with Costa leves) (all but black ghost are 
 Then ocean fish to 100. Things that help - in order of importance - cordials, rng, gp from gear, food.
 A typical result without anything looks like  1 - 11 - 21 - 31 - 39 - 45 - 50 - 55 - 59 - 63 - 67 - 70 - 73 - 76 - 79 - 82 - 85 - 88 - 90 - 92 - 94 - 96 - 98 - 100
 
-#### Info on rankings
+## Info on rankings
 Based on my toons with 9 retainers you cap out on ~1.2m seals/week or 5.2m /month. That lands you around 10th place for gc ranking on low pop OCE servers, and only lower anywhere else.
 
-#### Numbers and stuff:
+## Numbers and stuff:
 
 Gil per quick venture (7.25):
 SE decided OC should give you old expensive items :'( This means while ppl are farming that, the price of dyes went down by 30-50%. You can still sell them if you want or hold onto your venture coffers until the price goes back up.
@@ -213,7 +217,7 @@ With FC points: 529 = 529 x 1 fc points
 
 On top of this you will also get items to sell, most of which are going to be vendored, because it's a hassle to sell manually. Just add anything worth less than 20k-50k to your AR sell list.
 
-Speed:
+### Speed:
 Your handling time will depend on a bunch of factors: login queue, AR settings and enabled features, ping, fps. But ballpark figures for me on an old pc are: 
 Relog: avg. 55 seconds (40-80 s), retainer: avg. 7.5 s, or 70 s total for 2 retainers. Turnin takes 1.16 s/retainer, more on this below. So with a 40x2 army you should complete a cycle in less than 48 minutes (40* (55 +2 * (7.5+1.16))/60) which means your retainers are fully efficient and can fit more into an hour.
 

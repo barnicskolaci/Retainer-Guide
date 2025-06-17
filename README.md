@@ -42,7 +42,9 @@ Please note the order isn't .
 ## Resources
 [Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, SomethingNeedDoing, Lifestream, and more. They'll be mentioned as needed.
 
-[Henchman](https://raw.githubusercontent.com/Knightmore/Henchman/main/repo.json)
+Henchman repo: https://raw.githubusercontent.com/Knightmore/Henchman/main/repo.json
+
+Warning: as of 17Jun2025 old SND scripts must be used in SND Legacy or rewritten for the new SND.  
 
 (Optional)[F.U.T.A.](https://github.com/Jaksuhn/SomethingNeedDoing/tree/master/Community%20Scripts/AutoRetainer%20Companions/AutoMaintenance) retainer manager, levels FSH via ocean fishing, does turnin
 
@@ -58,7 +60,7 @@ ar: AutoRetainer
 ad: Autoduty
 fc: Free Company
 gc: Grand Company
-post-process: AR can do a few things after it finished a toon, such as starting a script. See [Resources](#resources) for more.
+post-process: AR can do a few things after it finished a toon, such as starting a script. See the end of [Setup](#setup) for more.
 qst: Questionable
 qv: Quick Venture
 snd: SomethingNeedDoing
@@ -67,19 +69,37 @@ toon: Character
 
 ## Practical considerations
 
-If you want subs, you should look for a server with housing availability. Check [PaissaDB](https://zhu.codes/paissa)
-Login time: Unless you're playing on a dead server, chances are you'll mostly have a 30s queue time. If you want to wait less, and don't mind checking some stuff, read further.
-Login time works like this: the game updates the queue every 30s. If there's no queue, you get in. So, wether the queue is 1 or 100, you're still waiting 30s. If there's no queue, then you don't wait. Waitingway tracks login queues, you can find the data [here](https://grafana.camora.dev/d/adkjhur7scc1sf/waitingway?orgId=1&refresh=5m) (page takes a while to load). Select something sensible like 7 days and find the graph titled Queue Size for your DC of interest, click icon in the top right corner, inspect, Data, download csv. Now, to interpret that csv data file I 'made' a [lil tool](https://claude.ai/public/artifacts/63988bc0-3bb8-4a26-8845-b21fc35b382d). Pull the csv file into it and it'll give you the average login time.
+### Subs
+If you want subs, you should look for a server with housing availability. Check [PaissaDB](https://zhu.codes/paissa) and/or ask sublords in #housing-deployables in the Punish discord.
+
+### Login time
+Unless you're playing on a dead server, chances are you'll mostly have a 30s queue time. If you don't wanna min/max, I recommend choosing the server with the best ping. If you want to potentially save time on login, and don't mind checking some stuff, read further.
+Login time works like this:  If there's no queue, you get in and the game updates the queue every 30s. So, wether the queue is 1 or 100, you're still waiting 30s. If there's no queue, then you don't wait. Waitingway tracks login queues, you can find the data [here](https://grafana.camora.dev/d/adkjhur7scc1sf/waitingway?orgId=1&refresh=5m) (page takes a while to load and you need to scroll down). Select something sensible like 7 days at the top and find the graph titled Queue Size for your DC of interest, click icon in the top right corner, inspect, Data, download csv. Now, to interpret that csv data file I 'made' a [lil tool](https://claude.ai/public/artifacts/ef71b600-aaa9-412a-bdde-10314a6bfbbb). Pull the csv file into it and it'll give you the average login times.
 Mind you these numbers are not accurate, because the sample from Waitingway is more populated near busy times. But it's still good for a relative comparison.
-For the sake of convenience you can find the times as of 17 JUN 2025 [here](#login-times)
-How many are you making: retainer/toon
-If you have entry subscription
-Starting funds
+Now - before you all flock to OCE - AR, Deliveroo and manual things that you want to do will take longer due to ping which somewhat counteracts the time save on login. For me personally from EU that basically means I save next to nothing by being on OCE, but your mileage may vary.
+For the sake of convenience you can find the login time of the last 30 days as of 17 JUN 2025 [here](#login-times)
+
+### How many toons to make
+Generally speaking you want your toons to be processed in a little over an hour even at the best times. TLDR: make 40 and adjust as needed.
+
+If you wanna think ahead, you can measure how quickly you log in and process reatiners on a given DC (or use my numbers from an old pc as a start) and use this formula:
+```
+3600/(relog_time+(retainers*(retainer_processing_time)) = no. of toons
+my numbers 3600/(55+retainers*6) = no. of toons
+```
+Your overall processing time will vary due to login queue, fps, ping and what other management tasks AR is doing, but whatever the formula give you or 40 is a good estimate.
+
+### Entry subscription
+You can get away with 8 toon/DC, but you'll be limited to ~30 toons so I get as many retainers as you can afford (except maybe the premium app one). If you plan on having 4 or fewer retainers/toon, I'd recommend upgrading your subscripion as you'll have a bunch of downtime within an hour.
+
+### Starting resources
+Some parts of the retainer making process can be made faster with gil or gathering, namely getting green gear for seals at the start and buying leve fish/GC delivery&supply mission items.
+You can gather them yourself (via retainers even) and pay for a 2nd account to trade these from your main; or ask for help on Discord. More on how much of what you need is detailed in their respective sections, but it's worth starting ASAP if you don't have the gil to throw at the problem.
 
 ## Setup
 
 Plugins: Dalamud Plugin Installer - Settings - Experimental - scroll down - Custom plugin repositories. Add the repo links to a new line, press plus, click save. Then install the plugin from the installer.
-Extra for SND (SomethingNeedDoing): While you're there, you'll need to enable testing builds
+Extra for SND Legacy: While you're there, you'll need to enable testing builds
 
 ![image](https://github.com/user-attachments/assets/cdaac55c-a7cd-4238-bba1-908cc1669568)
 
@@ -89,8 +109,11 @@ Once you have SND installed, right click, get the testing version
 Scripts: These will tell you usually in both the script itself and on the github page what they need. Read the requirements and don't forget to set the settings within the script. 
 For setting config folder for AutoHunt: Open SND. Click help, click options on the help window.
 ![image](https://github.com/user-attachments/assets/bbd6f2f7-a80d-4797-a5d9-2c1e92acfa7d)
+IDK HOW THE NEW SND WORKS YET, I'LL UPDATE THIS AFTER I DO.
 
-You can also set a script to run after AR under AutoRetainer. 
+You can also set a script to run after AR under the AutoRetainer option.
+
+![image](https://github.com/user-attachments/assets/aae37fb7-ae46-45d7-a50e-a770840f35d1)
 
 # Road to 50
 
@@ -197,6 +220,7 @@ Relog: avg. 55 seconds (40-80 s), retainer: avg. 7.5 s, or 70 s total for 2 reta
 If you're slower than these numbers, minimise your game and try to raise fps, disable plugins.
 
 #### Login times
+
 EU/Light
 
 ![image](https://github.com/user-attachments/assets/de3b5486-bd1d-42fa-864b-2e187b33db7c)
@@ -222,6 +246,25 @@ NA/Dynamis
 
 ![image](https://github.com/user-attachments/assets/c26da5ad-3c72-4584-9383-e054aeeb1638)
 
+JP/Elemental
+
+![image](https://github.com/user-attachments/assets/1436311b-ea98-48f1-a29f-87fda4e6373f)
+
+JP/Gaia
+
+![image](https://github.com/user-attachments/assets/fad514fb-cd63-4769-a053-71a4993a62bf)
+
+JP/Mana
+
+![image](https://github.com/user-attachments/assets/7d98e1aa-8b45-4fd0-a91d-4157ae7ebaea)
+
+JP/Meteor
+
+![image](https://github.com/user-attachments/assets/1564e4d6-45a1-44a3-a8e4-5e4aeeee6cf2)
+
+OCE/Materia
+
+![image](https://github.com/user-attachments/assets/6237201d-3bc6-46d4-8725-b7618b8171a6)
 
 
 Turnin: Again, depends, so ballpark. With proper inventory management (ie. AR unconditional sell list and periodic cleaning) you need turnin after about 750 qv (inventory + armory is 530 slots, some used for stuff to be sold makes it ~500, with ~66% of getting turnin gear, that'll fill in 750 qv). Turnin takes about 15 min, that's 1.16 s (15 x 60/750) for each qv. With only 2 retainers you should need it every 15.6 days (750/2/24). With more retainers, it's more frequent, but even with 10 total retainers it'll be an extra 11.6 s which is ~9% of the expected runtime of 130 s (55+10 x 7.5).

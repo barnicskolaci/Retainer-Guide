@@ -98,7 +98,7 @@ You can also set a script to run after AR under the AutoRetainer option.
 
 # Road to 50
 ## Toon creation
-You can make 8 toons/day. If there's an automatic way to do this, I'll update it, until then, just do them manually in whatever way you see fit.  
+You can make 8 toons/day. If there's an automatic way to do this, I'll update this, until then, just do them manually in whatever way you see fit.  
 Marauder is recommended for now because it gets stuck the least in early quests, but if things change I'll update this. I would not worry too much about the name or the look of toons, except to make them blend in. The standard names are likely taken, so if you run out of ideas just change a letter or two. Random look is ok.
 
 ## Unlocking retainers

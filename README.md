@@ -102,10 +102,10 @@ You can make 8 toons/day. If there's an automatic way to do this, I'll update it
 Marauder is recommended for now because it gets stuck the least in early quests, but if things change I'll update this. I would not worry too much about the name or the look of toons, except to make them blend in. The standard names are likely taken, so if you run out of ideas just change a letter or two. Random look is ok.
 
 ## Unlocking retainers
-Henchman takes care of unlocking retainers. More on how to use them later.
+Henchman takes care of unlocking retainers. More on how to use them in [Retainer Management](#retainer-management).   
 ## Onto level 50
 Qst and companion script should take you to 50. There are a few places where it _currently_ gets stuck (such as solo duties), but once we've figured out the new snd, it should be easy enough to fix.  
-You can set a level limit in qst companion to switch to the next toon at 50.
+You can set a level limit in qst companion to switch to the next toon at 50.   
 ## GC ranks
 You will need seals, later ranks also need the GC hunt log 1&2. Seals are best collected via Expert Delivery. Until you have it unlocked, you should use CBT's Enforce Expert Delivery option.
 # Leveling your retainer class
@@ -130,43 +130,38 @@ For the main bulk of levelling, the ~~best~~ popular way is to get fish with ret
 For this you'll need 156 leves with preferred world bonus, double that without.
 <details>
     <summary>Details</summary>
- 
-    Average leve is 50% × Black Sole XP(+100% if preferred world) × 3 + 50% × other XP(+100% if preferred world)
- 
-    50% × 206492 × 200% × 3 + 50% × 344153 × 200% = 963629  
-    
-    XP from 30 to 90 is 150168400  
-    
-    150168400 / 963629 = 155.8363229 leves  
-    
-</details>
+    Average leve is 50% × Black Sole XP(+100% if preferred world) × 3 + 50% × other XP(+100% if preferred world) <br>  
+    50% × 206492 × 200% × 3 + 50% × 344153 × 200% = 963629<br>
+    XP from 30 to 90 is 150168400<br>
+    150168400 / 963629 = 155.8363229 leves   
+</details>  
+
 _Friendly note: you can stop at an earlier level, since you'll need to do the rest with ocean fishing and there's some leeway in there before you need a new boat for lvl 100 (or you can top up your xp with GC delivery missions)_  
 
 Prioritise Black Sole in ChilledLeves.  
-Since 1/6th of the time you can choose between Tuna and Herring their ratio can vary between 2:1 and 1:2. I don't know how to make sure ChilledLeves handles this yet.
+Since 1/6th of the time you can choose between Tuna and Herring their ratio can vary between 2:1 and 1:2. I don't know how to make sure ChilledLeves handles this yet.  
 But, the flexibility is good cause Tuna can be gathered faster with retainers, so make you AR venture plan like so.  
 ![image](https://github.com/user-attachments/assets/6514a076-b631-4433-961c-5ed26bd675e7)  
 
-If you're going all the way, you'll need 156 Ash Tuna, 78 Indigo Herring, 702 Black Sole per alt; 6240, 3120 and 28080 per 40 alts.
-If you're not gathering, you can buy either fish as long as both are at least 78 and add up to 234.
+If you're going all the way, you'll need 156 Ash Tuna, 78 Indigo Herring, 702 Black Sole per alt; 6240, 3120 and 28080 per 40 alts.  
+If you're not gathering, you can buy either fish as long as both are at least 78 and add up to 234.  
 
 ### Any level: Ocean Fishing
-
-If for some reason leves are no longer viable for you, either cause you've hit 90, don't have fish or gil to buy it or anything else, ocean fishing is a good way to level.
-Every 2 hours you can do it for 22 min, use F.U.T.A or some other script to start it when it's up and fish with AutoHook from puni.sh using the presets. The downside is it's only every 2 hours, so solely relying on this for levelling will add about day per toon until you're done, but it is completely afk at least.
+If for some reason leves are no longer viable for you, either cause you've hit 90, don't have fish or gil to buy it or anything else, ocean fishing is a good way to level.  
+Every 2 hours you can do it for 22 min, use F.U.T.A or some other script to start it when it's up and fish with AutoHook from puni.sh using the presets.  
+The downside is it's only every 2 hours, so solely relying on this for levelling will add about day per toon until you're done, but it is completely afk at least.  
 ![image](https://github.com/user-attachments/assets/6c9f87ef-742b-48dc-a4b8-6b00bf3bc3f1)
 
 ## Combat
-
-The least automatic of the 3. All I can say is run Qst and companion script till it doesn't work anymore and be prepared for a lot of manual piloting.
-Cons:  
+The least automatic of the 3. All I can say is run Qst and companion script till it doesn't work anymore and be prepared for a lot of manual piloting.  
+Cons:   
     - Takes the most manual work (crystal tower+wherever msq isn't fully auto)  
     - Takes the longest time (~5 days/toon)  
 Pros:  
     - Opens up income streams (everything non-ARR: daily maps, EW leves, doman enclave, high lvl ventures)      
     - Free retainer gear (high iLvl makes HQ items from qv more likely, targeted ventures for combat classes)  
     - Alts for raiding  
-It's the path least taken, if you have advice for those that choose this, 
+It's the path least taken, if you have advice for those that choose this, let me know and I'll expand this section.
 
 # Retainer management
 

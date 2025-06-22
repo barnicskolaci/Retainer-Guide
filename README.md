@@ -48,14 +48,14 @@ turnin: exchanging gear for seals via Expert Delivery with Deliveroo
 
 ## Practical considerations
 ### How many toons to make  
-Generally speaking you want your toons to be processed in a little over an hour even at the best times. TLDR: make 40 and adjust as needed.  
-If you wanna think ahead, you can measure (with a stopwatch or code) how quickly you log in and process retainers on a given DC (or use my numbers from an old pc as a start) and use this formula:
+Generally speaking you want enough to fill an hour even at the best times. TLDR: make 40 and adjust as needed.  
+If you wanna think ahead, you can measure (with a stopwatch or script) how quickly you log in and process retainers on a given DC (or use my numbers from an old pc as a start) and use this formula:
 > 3600/(relog_time+(retainers*(retainer_processing_time)) = no. of toons
 
 My numbers:
 > 3600/(55+retainers*6) = no. of toons
 
-Your overall processing time will vary due to login queue, fps, ping and what other management tasks AR is doing, but whatever the formula gives you or 40 is a good estimate.
+Your overall processing time will vary due to login queue, fps, ping and what other management tasks AR is doing, but whatever the formula gives you is a good estimate.
 
 ### Subs
 If you want subs, you should look for a server with housing availability. Check [PaissaDB](https://zhu.codes/paissa) and/or ask sublords in #housing-deployables in the Punish discord.

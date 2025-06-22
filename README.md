@@ -4,26 +4,8 @@ by Friendly
 
 still heavily work in progress
 
-# Sections
-1. [Getting started](#Getting-started)
-   - 1.1 [Overview](#Overview)
-   - 1.2 [Resources](#Resources)
-   - 1.3 [Glossary](#Glossary)
-   - 1.4 [Practical Considerations](#Practical-considerations)
-   - 1.5 [Setup](#setup)
-2. [Road to 50](#road-to-50)
-   - 2.1 [Toon creation](#Toon-creation)
-   - 2.2 [Early levels](#Early-levels)
-   - 2.3 [Unlocking retainers](#Unlocking-retainers)
-   - 2.4 [Onto level 50](#Onto-level-50)
-   - 2.5 [GC ranks](#GC-ranks)
-3. [Leveling your retainer class](#Leveling-your-retainer-class)
-   - 3.1 [Botanist/Miner](#Botanist/Miner)
-   - 3.2 [Fisher](#Fisher)
-   - 3.3 [Combat](#Combat)
-4. [Retainer management](#Retainer-management)
-5. [Miscellaneous](#Miscellaneous)
-
+To find things easily, use the Outline
+![image](https://github.com/user-attachments/assets/e44bc4d0-d814-4494-8fbb-d1a8990fed8e)
 
 
 # Getting started

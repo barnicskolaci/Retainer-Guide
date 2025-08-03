@@ -1,3 +1,5 @@
+[[I'm no longer active but most of this is still correct]]
+
 # Retainer-Guide
 Plans and tips for making (many) retainers in FFXIV  
 by Friendly

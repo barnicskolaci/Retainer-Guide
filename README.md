@@ -54,7 +54,7 @@ Generally speaking you want enough to fill an hour even at the best times. TLDR:
 If you wanna think ahead, you can measure (with a stopwatch or script) how quickly you log in and process retainers on a given DC (or use my numbers from an old pc as a start) and use this formula:
 > 3600/(relog_time+(retainers*(retainer_processing_time)) = no. of toons
 >
-> I've made a lil tool to check your numbers, the total retainers you get can be multiplied by the gil breakdown in [Numbers and stuff](#Numbers-and-stuff).
+> I've made a [lil tool](https://claude.ai/public/artifacts/c58325eb-961d-47e6-9147-0008be30611a) to check your numbers, the total retainers you get can be multiplied by the gil breakdown in [Numbers and stuff](#Numbers-and-stuff).
 
 My numbers:
 > 3600/(55+retainers*6) = no. of toons

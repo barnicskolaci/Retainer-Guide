@@ -53,6 +53,8 @@ turnin: exchanging gear for seals via Expert Delivery with Deliveroo
 Generally speaking you want enough to fill an hour even at the best times. TLDR: make 40 and adjust as needed.  
 If you wanna think ahead, you can measure (with a stopwatch or script) how quickly you log in and process retainers on a given DC (or use my numbers from an old pc as a start) and use this formula:
 > 3600/(relog_time+(retainers*(retainer_processing_time)) = no. of toons
+>
+> I've made a lil tool to check your numbers, the total retainers you get can be multiplied by the gil breakdown in [Numbers and stuff](#Numbers-and-stuff).
 
 My numbers:
 > 3600/(55+retainers*6) = no. of toons

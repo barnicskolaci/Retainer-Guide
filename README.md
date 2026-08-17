@@ -66,6 +66,8 @@ If you wanna think ahead, you can measure (with a stopwatch or script) how quick
 My numbers:
 > 3600/(55+retainers*6) = no. of toons
 
+_Note: the 6 s here is an older measurement — [Speed](#speed) breaks it down as 7.5 s per retainer plus 1.16 s of amortised turnin. Use 8.5-9 s if you want the pessimistic estimate, and re-measure on your own machine either way._
+
 Your overall processing time will vary due to login queue, fps, ping and what other management tasks AR is doing, but whatever the formula gives you is a good estimate.
 
 ### Subs
@@ -118,7 +120,7 @@ Henchman takes care of unlocking retainers. More on how to use them in [Retainer
 Qst and companion script should take you to 50. There are a few places where it _currently_ gets stuck (such as solo duties), but once we've figured out the new snd, it should be easy enough to fix.  
 You can set a level limit in qst companion to switch to the next toon at 50.   
 ## GC ranks
-You will need seals, later ranks also need the GC hunt log 1&2. Seals are best collected via Expert Delivery. Until you have it unlocked, you should use CBT's Enforce Expert Delivery option.
+You will need seals, later ranks also need the GC hunt log 1&2. Seals are best collected via Expert Delivery. Until you have it unlocked, you should use CBT's Enforce Expert Delivery option. (This predates AR folding Deliveroo in; AR's own rank-check override is described below, and is the more likely thing you'd reach for now.)
 
 **Get every toon to rank 6, and treat it as mandatory rather than a nice-to-have (added 18 AUG 2026).** AutoRetainer will not run Expert Delivery below GC rank 6 — the check is `GetRank() >= 6` and it is the first thing `CanExpertDeliver()` tests, before any of your delivery triggers are even looked at. Below rank 6 the plugin quietly does nothing at the GC forever: no turnin, no seal spending, no venture purchases. It does not warn you.
 
@@ -218,11 +220,11 @@ It's the path least taken, if you have advice for those that choose this, let me
 
 Your retainers run on **venture tokens**. Tokens come from the Grand Company Quartermaster; the seals to buy them come from Expert Delivery turnin. AR drives both halves. Understand this loop before you tune anything, because when it stops it stops *silently*.
 
-**Good news first: you do not have to configure the purchase.** AR appends Ventures to your GC exchange list automatically as the final fallback — it buys them up to a 65,000 cap once nothing else on your list can be bought. An empty exchange list is a perfectly fine setup and means "spend everything on ventures". You only need to touch that list if you want something *other* than ventures bought first.
+**Good news first: you do not have to configure the purchase.** AR appends Ventures to your GC exchange list automatically as the final fallback — it buys them up to a 65,000 cap once nothing else on your list can be bought. An empty exchange list is a perfectly fine setup and means "spend everything on ventures". You only need to touch that list (Inventory Management, *Grand Company Delivery / Exchange Lists*) if you want something *other* than ventures bought first.
 
 **What actually stops the loop** is AR deciding not to go to the GC at all. Every one of these must be true or the whole thing is skipped, in this order:
 
-1. **Multi Mode Expert Delivery is enabled** — AR Inventory Management -> Grand Company Delivery -> "Enable Multi Mode Expert Delivery".
+1. **Multi Mode Expert Delivery is enabled** — AR Inventory Management, *Grand Company Delivery / General Settings*, checkbox "Enable Multi Mode Expert Delivery".
 2. **The toon is GC rank 6 or higher.** Hard gate, checked before anything below it. See [GC ranks](#gc-ranks) — this is the one that bites.
 3. **There is deliverable gear in the inventory.** No gear, no trip. This matters more than it sounds: gear comes from quick ventures, so if tokens are already at zero there's nothing being farmed to hand in.
 4. **A trigger fires** — either free inventory slots drop to your threshold, or (if you've enabled "deliver on venture exhaust") the venture count falls below your set number. Set the venture trigger. Inventory-only means a farm with plenty of free space never refills its tokens.
@@ -235,6 +237,24 @@ Symptoms you're in it:
 - AR disabling toons on its own — a toon with no tokens has nothing to do, so it drops out of rotation. Fleet-wide it looks exactly like a plugin bug. It isn't one.
 
 Your seal cap also rises with GC rank, so a low-rank farm wastes income faster whenever it stalls.
+
+## Hiring them in the first place
+
+[Henchman](https://raw.githubusercontent.com/Knightmore/Henchman/main/repo.json) does the Retainer Vocate interaction, so hiring is not the manual slog it looks like — that's why [Unlocking retainers](#unlocking-retainers) hands you off to here. Its `Retainer Vocate` config lives per-client alongside its other job folders, so a client that has run it once can be copied to the rest.
+
+Two things to settle *before* you let it loose, because both are effectively permanent:
+
+- **Which class.** A retainer needs a class and an equipped main arm before it can venture at all, you can only assign a class you have unlocked yourself, and changing class later **destroys the EXP the retainer accumulated on the old one**. See [Leveling your retainer class](#leveling-your-retainer-class).
+- **How many slots you actually have.** Two per character are free. Up to seven more are paid add-ons, plus one via the Companion App — 9 with add-ons, 10 with the app. The catch: **paid slots are per service account, shared across every character on it.** They follow the account, not the character, so on an account holding 32 toons buying slots does *not* multiply by 32. Price that out before you commit to a retainer count in the [formula](#how-many-toons-to-make).
+
+## Keeping inventory under control
+
+Turnin needs *deliverable gear* in the bag, and quick ventures return plenty of junk that isn't. Two AR lists to know:
+
+- **Unconditional Sell List** — anything on it gets vendored no questions asked. Fastest way to populate it is right-clicking an item and picking "+ Add to Unconditional sell list"; there's also a bulk adder at Inventory Management, *Inventory Cleanup / Fast Addition and Removal*.
+- **Quick Venture Sell List** — same idea, scoped to QV returns. Items already on the unconditional or discard lists won't be added here.
+
+Anything worth less than ~20-50k belongs on a sell list. Left alone, a full inventory blocks turnin, and blocked turnin is a stalled farm — see the deadlock above.
 
 ## Retainer levels
 

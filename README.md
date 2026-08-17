@@ -371,7 +371,7 @@ On top of this you will also get items to sell, most of which are going to be ve
 
 ### Speed
 Your handling time will depend on a bunch of factors: login queue, AR settings and enabled features, ping, fps. But ballpark figures for me on an old pc are: 
-Relog: avg. 55 seconds (40-80 s), retainer: avg. 7.5 s, or 70 s total for 2 retainers. Turnin takes 1.16 s/retainer, more on this below. So with a 40x2 army you should complete a cycle in less than 48 minutes (40* (55 +2 * (7.5+1.16))/60) which means you can fit more retainers into an hour.
+Relog: avg. 55 seconds (40-80 s), retainer: avg. 7.5 s, or 70 s total per toon carrying 2 retainers (55 + 2x7.5). Turnin takes 1.16 s/retainer, more on this below. So with a 40x2 army you should complete a cycle in less than 48 minutes (40* (55 +2 * (7.5+1.16))/60) which means you can fit more retainers into an hour.
 
 If you're slower than these numbers, minimise your game and try to raise fps, disable unused plugins (via collections).
 

@@ -1,4 +1,4 @@
-[[I'm no longer active but most of this is still correct]]
+[[Was dormant for a while; refreshed 18 AUG 2026 against a live 352-toon farm — see [Field report](#field-report-a-352-toon-farm-18-aug-2026) for measured numbers and the mistakes that cost the most.]]
 
 # Retainer-Guide
 Plans and tips for making (many) retainers in FFXIV  
@@ -17,24 +17,31 @@ The process of making retainers has a lot of components. It'll take months, but 
 The overall process can be broken down into these parts:  
 Please note you don't have to finish one step on all toons before starting the next one.  
 - Figure out your goals: This is one of the most important tasks of them all. How many toons? Do you want submersibles too? Choose accordingly.
-- Level toon to 50
+- Level toon to 50 (47 is enough in practice if you're stopping Questionable there — see [Field report](#field-report-a-352-toon-farm-18-aug-2026))
 - Make retainers
 - Level retainer job and retainers to 100
-- (Optional) Unlock GC rank 9
+- **Unlock GC rank 6** — not optional, see [GC ranks](#gc-ranks). Automated Expert Delivery refuses to run below it, and Expert Delivery is what funds your ventures.
+- (Optional) Unlock GC rank 9 (duck bones)
 - (Optional) Make FC
 
 ## Resources
 [Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, SomethingNeedDoing, Lifestream, and more. They'll be mentioned as needed.  
-[Henchman repo](https://raw.githubusercontent.com/Knightmore/Henchman/main/repo.json): make retainers, complete hunt log (future feature as of 22 JUN 2025)
+[Henchman repo](https://raw.githubusercontent.com/Knightmore/Henchman/main/repo.json): make retainers, complete hunt log (was a planned feature as of 22 JUN 2025 — check the repo for current state before relying on it)
 
-***Warning: as of 17 JUN 2025 old SND scripts must be used in SND Legacy or be rewritten for the new SND.***  
+***Warning: as of 17 JUN 2025 old SND scripts must be used in SND Legacy or be rewritten for the new SND.*** Still true as of 18 AUG 2026 — plan on Legacy for anything you copy off an older guide.  
 (Optional)[F.U.T.A.](https://github.com/McVaxius/dhogsbreakfeast/tree/main/AutoRetainer%20Companions/F.U.T.A) retainer manager, levels FSH via ocean fishing, does turnin  
 [Wiggly/Friendly scripts](https://github.com/WigglyMuffin/SNDScripts/tree/main/Scripts/)
  - Character Cycler: Runs a script on a list of characters before AutoRetainer can do it
  - (Optional)Overseer: retainer/sub manager, uses gc missions to level any DoL and trades mats between accounts to do so.
  - Questionable Companion: for nearly all issues that stop Questionable from completing an alt
  - (Optional)AutoHunt: does your (GC) hunt log and dungeons/quests and ranks up to the rank 9 for duck bones
-   
+
+Plugins the farm actually runs day to day, added 18 AUG 2026:
+ - **[ChilledLeves](https://github.com/CheatingChild/ChilledLeves)**: the whole leve loop. Picks up, turns in, and repeats fisher leves. This is what does 1→89 FSH.
+ - **AutoHook** (puni.sh) + **DistantSeas**: ocean fishing. AutoHook does the casting off presets, DistantSeas tracks the route/results.
+ - **Questionable** + **Questionable Companion**: MSQ/class quests to whatever level you stop at.
+ - **Lifestream**: teleports. Everything above assumes it's installed.
+
 ## Glossary  
 ar: AutoRetainer  
 ad: Autoduty  
@@ -46,7 +53,7 @@ qv: Quick Venture
 snd: SomethingNeedDoing  
 sub: Submersible (in FC workshop)  
 toon: Character  
-turnin: exchanging gear for seals via Expert Delivery with Deliveroo  
+turnin: exchanging gear for seals via Expert Delivery. Deliveroo used to do this; it's built into AR now, so there's nothing extra to install.  
 
 ## Practical considerations
 ### How many toons to make  
@@ -74,8 +81,8 @@ Login time works like this:  If there's no queue, you get in. Otherwise the game
 Select the data you need at the top, time should be something sensible like 7 days and find the graph titled Queue Size for your DC of interest, click icon in the top right corner, inspect, Data, download csv.  
 To interpret that csv data file I 'made' a [lil tool](https://claude.ai/public/artifacts/ef71b600-aaa9-412a-bdde-10314a6bfbbb). Pull the csv file into it and it'll give you the average login times.  
 Mind you these numbers are not accurate, because the sample from Waitingway is more populated near busy times. But it's still good for a relative comparison.  
-Now - _before you all flock to OCE_ - AR, Deliveroo and manual things that you want to do will take longer due to ping which somewhat counteracts the time save on login. For me personally from EU that basically means I save next to nothing by being on OCE, but your mileage may vary.  
-For the sake of convenience you can find the login time of the last 30 days as of 17 JUN 2025 [here](#login-times)
+Now - _before you all flock to OCE_ - AR and manual things that you want to do will take longer due to ping which somewhat counteracts the time save on login. For me personally from EU that basically means I save next to nothing by being on OCE, but your mileage may vary.  
+For the sake of convenience you can find the login time of the last 30 days as of 17 JUN 2025 [here](#login-times) — these have not been re-pulled since, so treat them as relative comparison only
 
 ### Entry subscription
 You can get away with 8 toon/DC, but you'll be limited to ~30 toons so I'd get as many retainers as you can afford (except maybe the premium app one). If you plan on having 4 or fewer retainers/toon, I'd recommend upgrading your subscripion as you'll have a bunch of downtime within an hour.
@@ -112,9 +119,23 @@ Qst and companion script should take you to 50. There are a few places where it 
 You can set a level limit in qst companion to switch to the next toon at 50.   
 ## GC ranks
 You will need seals, later ranks also need the GC hunt log 1&2. Seals are best collected via Expert Delivery. Until you have it unlocked, you should use CBT's Enforce Expert Delivery option.
+
+**Get every toon to rank 6, and treat it as mandatory rather than a nice-to-have (added 18 AUG 2026).** AutoRetainer will not run Expert Delivery below GC rank 6 — the check is `GetRank() >= 6` and it is the first thing `CanExpertDeliver()` tests, before any of your delivery triggers are even looked at. Below rank 6 the plugin quietly does nothing at the GC forever: no turnin, no seal spending, no venture purchases. It does not warn you.
+
+There *is* an override — `/ays set IgnoreGCRankCheck true`, also in AR's Advanced/Debug section as "Ignore GC rank check for MM delivery" — but AR's own troubleshooting page lists it as a **misconfiguration** and tells you to turn it off for normal operation. Treat it as a diagnostic, not a fix. Rank up instead.
+
+This is the single most expensive thing in this guide to get wrong, because the farm looks healthy the whole time it's happening. See [Field report](#field-report-a-352-toon-farm-18-aug-2026).
 # Leveling your retainer class
 
 ## Botanist/Miner
+
+Untested here — this farm went all-in on Fisher, so I have no measured numbers for it. What's worth knowing before you pick:
+
+- A retainer can only be assigned a class **you have unlocked yourself**, and its level is **capped by your own highest level in that class**. Levelling the retainer means levelling yourself first, always.
+- The class decides what it can bring back. MIN/BTN are the pick if you want specific sellable mats or you're feeding submersible builds; combat classes return monster parts (meats, skins) gatherers can't touch.
+- **Changing a retainer's class permanently destroys the EXP it accumulated on the old one.** In practice this is a one-way decision — make it before you sink ventures into anything.
+
+If you've done MIN/BTN at scale, tell me and I'll write this section properly.
 
 ## Fisher
 
@@ -122,11 +143,24 @@ Fisher is faster and/or cheaper than any other class to do. The downside is that
 
 ### 1-30
 
-You unlock FSH in Limsa, do your class quests till you unlock ocean fishing, then start with the Limsa leves. I'll need to check how ChilledLeves works to say what's the best way to get to 30, but it's gonna be some combination of leves. I expect this to take less than 40 leves.
+You unlock FSH in Limsa, do your class quests till you unlock ocean fishing, then start with the Limsa leves.
+
+**Answered 18 AUG 2026:** it's the Limsa levemete **Tmokkri** (NPC `1000970`), fisher leves, run until 30. Fish come from the vendor (Lominsan Anchovy, finger shrimp, coral butterfly), so no retainer supply needed for this stage. Take **two leves per bracket** here — unlike Costa, you're not budgeting a scarce fish, so grabbing both is a straight time save.
+
+Priority order (highest first, and priority order *is* the accept-fallback order — take the top one being offered, else the next):
+
+| Prio | Leve |
+|-|-|
+| 4 | The Fertile Incandescent |
+| 2 | Adventurers' Relish / Poor Boys Eat Well / They Taste Just as Pretty / Splendor in the Glass |
+| 1 | Soup to Guts / A Kelping Hand / Cloud Cutlet |
+| skip | Yummy in the Tummy, Fish by Many Other Names, Just Add Water, Brain Candy |
+
+Under 40 leves was the right guess.
 
 ### 30-90: Costa Leves
 For the main bulk of levelling, the ~~best~~ popular way is to get fish with retainers and use them for Costa Del Sol leves.  
-3/4 fish can be gathered with retainers. To get the max yield, you should get [!!insert lvl x] gear from [Y vendor in Z place] for all your retainers gathering these.  
+3/4 fish can be gathered with retainers. To get the max yield you want your gathering retainers geared — still need to pin down the exact item/vendor, so treat this as "buy the best FSH main hand you can hand them" for now.  
 > If you don't have any, you can ask others to sell it to you in #housing-deployables or find my listings on Sophia (OCE) (DM/tag me if sold out).
 
 ![image](https://github.com/user-attachments/assets/bd82c03a-8ce7-4b45-885d-5d539c6801f3)  
@@ -143,7 +177,18 @@ For this you'll need 156 leves with preferred world bonus, double that without.
 _Friendly note: you can stop at an earlier level, since you'll need to do the rest with ocean fishing and there's some leeway in there before you need a new boat for lvl 100 (or you can top up your xp with GC delivery missions)_  
 
 Prioritise Black Sole in ChilledLeves.  
-Since 1/6th of the time you can choose between Tuna and Herring their ratio can vary between 2:1 and 1:2. I don't know how to make sure ChilledLeves handles this yet.  
+Since 1/6th of the time you can choose between Tuna and Herring their ratio can vary between 2:1 and 1:2.
+
+**Answered 18 AUG 2026:** ChilledLeves' leve priorities *are* the fallback order, so you set it once and the ratio takes care of itself. Levemete **Nahctahr** (NPC `1004344`), fisher, run until 89:
+
+| Prio | Leve | Fish |
+|-|-|-|
+| 3 | Kitchen Nightmares No More | Black Sole |
+| 2 | A Recipe for Disaster | Ash Tuna |
+| 1 | Just Call Me Late for Dinner | Indigo Herring |
+| skip | The Blue Period | Sea Pickle |
+
+**Turn off grab-two-per-bracket for this one.** The fish counts below are budgeted against exactly that fallback order with *one* leve taken per visit — taking two at once burns your top *and* second-choice fish in the same trip and blows the budget.  
 But, the flexibility is good cause Tuna can be gathered faster with retainers, so make you AR venture plan like so.  
 ![image](https://github.com/user-attachments/assets/6514a076-b631-4433-961c-5ed26bd675e7)  
 
@@ -169,6 +214,36 @@ It's the path least taken, if you have advice for those that choose this, let me
 
 # Retainer management
 
+## The seal -> venture loop is the whole engine
+
+Your retainers run on **venture tokens**. Tokens come from the Grand Company Quartermaster; the seals to buy them come from Expert Delivery turnin. AR drives both halves. Understand this loop before you tune anything, because when it stops it stops *silently*.
+
+**Good news first: you do not have to configure the purchase.** AR appends Ventures to your GC exchange list automatically as the final fallback — it buys them up to a 65,000 cap once nothing else on your list can be bought. An empty exchange list is a perfectly fine setup and means "spend everything on ventures". You only need to touch that list if you want something *other* than ventures bought first.
+
+**What actually stops the loop** is AR deciding not to go to the GC at all. Every one of these must be true or the whole thing is skipped, in this order:
+
+1. **Multi Mode Expert Delivery is enabled** — AR Inventory Management -> Grand Company Delivery -> "Enable Multi Mode Expert Delivery".
+2. **The toon is GC rank 6 or higher.** Hard gate, checked before anything below it. See [GC ranks](#gc-ranks) — this is the one that bites.
+3. **There is deliverable gear in the inventory.** No gear, no trip. This matters more than it sounds: gear comes from quick ventures, so if tokens are already at zero there's nothing being farmed to hand in.
+4. **A trigger fires** — either free inventory slots drop to your threshold, or (if you've enabled "deliver on venture exhaust") the venture count falls below your set number. Set the venture trigger. Inventory-only means a farm with plenty of free space never refills its tokens.
+
+Conditions 2, 3 and 4 interact into a deadlock you can't get out of by waiting: no tokens -> no quick ventures -> no gear returned -> nothing deliverable -> no GC trip -> no tokens. Once a farm falls into that hole it stays there with a growing pile of unspendable seals. Breaking out needs an outside push — buy tokens by hand on a few toons, or hand in any gear you can scrape together, to restart the cycle.
+
+Symptoms you're in it:
+- Seal balances rising instead of hovering near zero.
+- Venture counts in single digits across most toons.
+- AR disabling toons on its own — a toon with no tokens has nothing to do, so it drops out of rotation. Fleet-wide it looks exactly like a plugin bug. It isn't one.
+
+Your seal cap also rises with GC rank, so a low-rank farm wastes income faster whenever it stalls.
+
+## Retainer levels
+
+Retainers gain EXP only from ventures, and cap at **your own** level in their class. So the order is: level yourself, then feed tokens, then the retainers climb. If tokens dry up the retainers freeze wherever they are — and the gil-per-QV numbers in [Numbers and stuff](#numbers-and-stuff) assume level 100 retainers, so a farm stuck in the 60s is earning well under what the maths promises.
+
+## Bells and parking
+
+Retainer work only happens at a Summoning Bell, which is why every AR routine is location-bound. Inn rooms are the reliable option (no housing needed, no wandering players). Park toons at a bell before you expect AR to process them, or you're paying teleport time on every single relog.
+
 # Miscellanious
 
 ## How many Ocean Fishing boats from 1-100?
@@ -180,10 +255,78 @@ Quarrymill leves to lvl 45-50 (or 30 with Costa leves) (all but black ghost are 
 Then ocean fish to 100. Things that help - in order of importance - cordials, rng, gp from gear, food.
 A typical result without anything looks like  1 - 11 - 21 - 31 - 39 - 45 - 50 - 55 - 59 - 63 - 67 - 70 - 73 - 76 - 79 - 82 - 85 - 88 - 90 - 92 - 94 - 96 - 98 - 100
 
+## Field report: a 352-toon farm (18 AUG 2026)
+
+Everything above was written while building this. Here's what the farm actually looks like now, measured off the AutoRetainer configs rather than remembered — including the parts that went wrong, which are the useful bit.
+
+### What exists
+
+| | |
+|-|-|
+| Toons | **352** — 11 clients x 32, one service account each, ~8 toons per world across 4 worlds |
+| Worlds | Cerberus 88, Phantom 88, Sagittarius 87, Omega 72, Moogle 14, Louisoix 3 |
+| Retainers | **704** — exactly 2 per toon, **all Fisher** |
+| Toon FSH level | 90-96, median **93** |
+| Toon MRD level | **47** on 328/352 (the deliberate Questionable stop) |
+| Retainer level | median **69** (420 at 69, 198 at 70, full range 40-78) |
+| GC rank | **3** on 351/352 |
+| FCs | **0** |
+| Subs | **0** |
+| Gil | 78.4M total, median 215k/toon |
+| Seals banked | **2,442,988** |
+| Venture tokens held | **2,204 across the whole fleet** |
+
+So: the hard part is done. 352 toons levelled, 704 retainers hired and classed, the leve pipeline ran to completion. And the farm is currently earning close to nothing.
+
+### What went wrong
+
+**Every toon is GC rank 3. AutoRetainer's Expert Delivery requires rank 6.** That's it. That's the whole thing.
+
+`CanExpertDeliver()` tests the rank before it looks at any of your delivery triggers, so on all 352 toons it returned false every single time, forever. No GC trip, no turnin, no venture purchase. The exchange settings were all correct — Multi Mode Expert Delivery on, venture-exhaust trigger on at 20, ventures auto-appended as the fallback purchase. All of it downstream of a gate that never opened.
+
+I originally diagnosed this as an empty exchange item list. That was wrong — an empty list means "spend everything on ventures", which is what I wanted anyway. The config was never the problem. The rank was.
+
+The damage in numbers:
+
+- Venture sends per day peaked at **12,382** (31 JUL), held ~10k/day through early August, and fell to **424** on 17 AUG. That's ~3% of peak. The farm was living off a token stockpile the whole time and slowly eating it.
+- **334 of 352 toons hold fewer than 4 venture tokens. 94 hold zero.**
+- 2.44M seals sat unspendable. At 200 seals a token that's **~12,200 ventures** — a full day of peak fleet output, earned and paid for, never collected.
+- **179 of 352 toons had disabled themselves in AR.** A toon with no tokens has nothing to do, so AR drops it from rotation. It reads exactly like a plugin bug. It is not a plugin bug.
+- Once tokens hit zero the deadlock locked: no tokens -> no quick ventures -> no gear -> nothing deliverable -> no GC trip. Even at rank 6 that last loop would have needed an outside push to restart.
+
+Nothing in any log said "you are not buying ventures". No warning fired for being under the rank requirement. The only visible signal was seals going up instead of down — which is the one thing that looks like success.
+
+**Second-order damage:** retainers earn EXP from ventures only, so they're frozen at level ~69 against a level-93 ceiling. Every gil-per-QV figure in [Numbers and stuff](#numbers-and-stuff) assumes level 100 retainers, so actual take is well under the projection until the tokens flow again and the retainers catch up.
+
+### Gaps still to close
+
+Roughly in order of gil-per-hour-of-effort:
+
+1. **Get all 352 toons from GC rank 3 to rank 6.** Nothing else on this list matters until this is done — it's the gate holding the entire income loop shut. Rank-ups cost seals, and there are 2.44M sitting there, so the backlog pays for its own fix.
+2. **Then break the deadlock by hand**: the rank gate opening isn't enough on its own, because zero tokens means no gear to deliver. Buy tokens directly on a batch of toons to restart quick ventures, then re-enable the 179 self-disabled toons and let the loop take over.
+3. **Retainers 69 -> 93.** Free once tokens flow — it's just venture EXP — but it takes real calendar time, so the sooner tokens come back the sooner the QV yields match the maths.
+4. **Toons 93 -> 100 FSH.** Leves are done at 89; the rest is ocean fishing (or topping up with GC delivery missions). See [How many Ocean Fishing boats](#how-many-ocean-fishing-boats-from-1-100).
+5. **Rank past 6 once the loop is running.** Rank also sets the seal cap, so a low cap keeps wasting income every time the farm stalls. Rank 9 (duck bones) stays optional.
+6. **Retainer slots: still 2 per toon, no add-ons in use.** Read the slot economics before buying — extra slots are **per service account, shared across every character on it**, so on a 32-toon account this does *not* multiply by 32. Worth pricing properly against the ~20% from the next item.
+7. **0 FCs, 0 subs.** That's the ~20% gil from selling company credits via ceruleum tank left entirely on the table, plus every submersible route. Needs a second account for a month to found them.
+8. **19 market board listings across 704 retainers.** Everything's being vendored. Fine as a deliberate choice, but it is a choice — see the AR unconditional sell list advice in [Turnin](#turnin).
+
+### The lesson worth stealing
+
+The failure wasn't a crash, it was an **unmet precondition that never announced itself**. Relogs worked. Leves worked. Every setting I'd have thought to check was correct. The farm was rank 3 against a rank 6 requirement from the day it was built, and it ran fine for weeks anyway — on a stockpile — so the symptom showed up long after the cause, which is the worst possible ordering for debugging.
+
+Two things I'd do differently:
+
+**Check the preconditions, not the settings.** I verified the exchange config repeatedly and it was right every time. The gate was one function call upstream of everything I was looking at. When a feature does nothing, find what has to be true before it runs, and test *that* first.
+
+**Alarm on outputs you expect to move, not processes you expect to run.** Seals climbing is plausible on its own. Token counts falling is plausible on its own. Together they're the entire diagnosis — and no log line was ever going to put them side by side for me.
+
 ## Info on rankings
 Based on my toons with 9 retainers you cap out on ~1.2m seals/week or 5.2m /month. That lands you around 10th place for gc ranking on low pop OCE servers, and only lower anywhere else.
 
 ## Numbers and stuff:
+
+_All figures below assume level 100 retainers. Below that the yields are lower — see [Field report](#field-report-a-352-toon-farm-18-aug-2026) for what a stalled farm actually earns._
 
 Gil per quick venture (7.25):
 SE decided OC should give you old expensive items :'( This means while ppl are farming that, the price of dyes went down by 30-50%. You can still sell them if you want or hold onto your venture coffers until the price goes back up.

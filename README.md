@@ -25,22 +25,17 @@ Please note you don't have to finish one step on all toons before starting the n
 - (Optional) Make FC
 
 ## Resources
-[Punish plugins](https://discord.com/channels/1001823907193552978/1272173416933494875): AutoRetainer, SomethingNeedDoing, Lifestream, and more. They'll be mentioned as needed.  
-[Henchman repo](https://raw.githubusercontent.com/Knightmore/Henchman/main/repo.json): make retainers, complete hunt log (was a planned feature as of 22 JUN 2025 — check the repo for current state before relying on it)
+[Punish plugins](https://puni.sh/): AutoRetainer, Lifestream, and more. They'll be mentioned as needed.  
+- **Questionable** + **[Questionable Companion](https://github.com/MacaronDream/QSTCompanion)**: MSQ/class quests to whatever level you stop at, fishing quests, make retainers, complete hunt log. QST has a Punish and Wiggly version, I used the latter, if you run into compatibility issues, you should too.
 
-***Warning: as of 17 JUN 2025 old SND scripts must be used in SND Legacy or be rewritten for the new SND.*** Still true as of 18 AUG 2026 — plan on Legacy for anything you copy off an older guide.  
-(Optional)[F.U.T.A.](https://github.com/McVaxius/dhogsbreakfeast/tree/main/AutoRetainer%20Companions/F.U.T.A) retainer manager, levels FSH via ocean fishing, does turnin  
-[Wiggly/Friendly scripts](https://github.com/WigglyMuffin/SNDScripts/tree/main/Scripts/)
- - Character Cycler: Runs a script on a list of characters before AutoRetainer can do it
- - (Optional)Overseer: retainer/sub manager, uses gc missions to level any DoL and trades mats between accounts to do so.
- - Questionable Companion: for nearly all issues that stop Questionable from completing an alt
- - (Optional)AutoHunt: does your (GC) hunt log and dungeons/quests and ranks up to the rank 9 for duck bones
+(Optional, but recommended)[Vermaxion](https://aethertek.io/plugins/vermaxion.html) Various automation tools for multi-toon setups, levels FSH via ocean fishing, bunch of useful post-AR tasks
+(Optional) [XA-Slave](https://aethertek.io/plugins/xa-slave.html) and [Sub Manager](https://aethertek.io/applications/xa-sub-manager.html)
+Former has many useful features, animation skip, GC rank unlock, disable rendering etc. Latter makes sure your clients work as they should, don't time out after 72 hours etc, handle subs if your doing FCs too.
 
 Plugins the farm actually runs day to day, added 18 AUG 2026:
- - **[ChilledLeves](https://github.com/CheatingChild/ChilledLeves)**: the whole leve loop. Picks up, turns in, and repeats fisher leves. This is what does 1→89 FSH.
- - **AutoHook** (puni.sh) + **DistantSeas**: ocean fishing. AutoHook does the casting off presets, DistantSeas tracks the route/results.
- - **Questionable** + **Questionable Companion**: MSQ/class quests to whatever level you stop at.
- - **Lifestream**: teleports. Everything above assumes it's installed.
+ - **[ChilledLeves](https://github.com/CheatingChild/ChilledLeves)**: the whole leve loop. Picks up, turns in, and repeats fisher leves. This is what does 1→30(→89) FSH.
+ - **AutoHook** (puni.sh): ocean fishing. AutoHook does the casting off preset(s), Made a Community Script for [leveling](https://github.com/PunishXIV/AutoHook/wiki/TESTING-PRESETS#ocean-fishing-lower-leveling-all-zones). If link is broken, just search the wiki for leveling. It's lower cause it'll use Patience I but it'll take you to max level if you don't do the HW quests  to get Patience II.
+ - **Lifestream/Vnavmesh** (Punish): teleports/moves. Hard dependency for most plugins.
 
 ## Glossary  
 ar: AutoRetainer  
@@ -66,7 +61,7 @@ If you wanna think ahead, you can measure (with a stopwatch or script) how quick
 My numbers:
 > 3600/(55+retainers*6) = no. of toons
 
-_Note: the 6 s here is an older measurement — [Speed](#speed) breaks it down as 7.5 s per retainer plus 1.16 s of amortised turnin. Use 8.5-9 s if you want the pessimistic estimate, and re-measure on your own machine either way._
+_Note: the 6 s here is an older measurement — [Speed](#speed) breaks it down as 7.5 s per retainer plus 1.16 s of amortised turnin. Use 8.5-9 s if you want the pessimistic estimate (which will be real if ping is high), and re-measure on your own machine either way._
 
 Your overall processing time will vary due to login queue, fps, ping and what other management tasks AR is doing, but whatever the formula gives you is a good estimate.
 
@@ -83,7 +78,7 @@ Login time works like this:  If there's no queue, you get in. Otherwise the game
 Select the data you need at the top, time should be something sensible like 7 days and find the graph titled Queue Size for your DC of interest, click icon in the top right corner, inspect, Data, download csv.  
 To interpret that csv data file I 'made' a [lil tool](https://claude.ai/public/artifacts/ef71b600-aaa9-412a-bdde-10314a6bfbbb). Pull the csv file into it and it'll give you the average login times.  
 Mind you these numbers are not accurate, because the sample from Waitingway is more populated near busy times. But it's still good for a relative comparison.  
-Now - _before you all flock to OCE_ - AR and manual things that you want to do will take longer due to ping which somewhat counteracts the time save on login. For me personally from EU that basically means I save next to nothing by being on OCE, but your mileage may vary.  
+Now - _before you all flock to OCE_ - AR and manual things that you want to do will take longer due to ping which somewhat counteracts the time save on login. For me personally from EU that basically means I save next to nothing by being on OCE (9x retainers being slower counteracts 1x login being faster), but your mileage may vary.  
 For the sake of convenience you can find the login time of the last 30 days as of 17 JUN 2025 [here](#login-times) — these have not been re-pulled since, so treat them as relative comparison only
 
 ### Entry subscription
@@ -91,63 +86,61 @@ You can get away with 8 toon/DC, but you'll be limited to ~30 toons so I'd get a
 
 ### Starting resources
 Some parts of the retainer making process can be made faster with gil or gathering, namely getting green gear for seals at the start and buying leve fish/GC delivery&supply mission items.  
-You can gather them yourself (via retainers even) and pay for a 2nd account to trade these from your main; or ask for help on Discord. More on how much of what you need is detailed in their respective sections, but it's worth starting ASAP if you don't have the gil to throw at the problem.
+You can gather them yourself ([costa fish](https://github.com/barnicskolaci/Retainer-Guide#30-90-costa-leves) via retainers even) and pay for a 2nd account to trade these from your main; or ask for help on Discord. More on how much of what you need is detailed in their respective sections, but it's worth starting ASAP if you don't have the gil to throw at the problem. 
 
 ## Setup
-Plugins: Dalamud Plugin Installer - Settings - Experimental - scroll down - Custom plugin repositories. Add the repo links to a new line, press plus, click save. Then install the plugin from the installer.  
-Extra for SND Legacy: While you're there, you'll need to enable testing builds  
+Plugins: Dalamud Plugin Installer - Settings - Experimental - scroll down - Custom plugin repositories. Add the repo links to a new line, press plus, click save. Then install the plugin from the installer.
 
-![image](https://github.com/user-attachments/assets/cdaac55c-a7cd-4238-bba1-908cc1669568)
+Some plugins may warrant a setup guide, but it's hard to say what and in what detail, so try your best to figure them out. You can always ask in the plugin's chat on discord.
 
-Once you have SND installed, right click, get the testing version 
-![image](https://github.com/user-attachments/assets/274dba6c-0f55-4b59-8689-8f48311b71f7)
-
-Scripts: These will tell you usually in both the script itself and on the github page what they need. Read the requirements and don't forget to set the settings within the script.  
-For setting config folder for AutoHunt: Open SND. Click help, click options on the help window.  
-![image](https://github.com/user-attachments/assets/bbd6f2f7-a80d-4797-a5d9-2c1e92acfa7d)  
-
-You can also set a script to run after AR under the AutoRetainer option.  
-![image](https://github.com/user-attachments/assets/aae37fb7-ae46-45d7-a50e-a770840f35d1)
+(SND section was removed, it's all plugins now)
 
 # Road to 50
 ## Toon creation
-You can make 8 toons/day. If there's an automatic way to do this, I'll update this, until then, just do them manually in whatever way you see fit.  
+You can make 8 toons/day. Henchman (Punish) can do it for you. (Any others?)  
 Marauder is recommended for now because it gets stuck the least in early quests, but if things change I'll update this. I would not worry too much about the name or the look of toons, except to make them blend in. The standard names are likely taken, so if you run out of ideas just change a letter or two. Random look is ok.
 
-## Unlocking retainers
-Henchman takes care of unlocking retainers. More on how to use them in [Retainer Management](#retainer-management).   
 ## Onto level 50
-Qst and companion script should take you to 50. There are a few places where it _currently_ gets stuck (such as solo duties), but once we've figured out the new snd, it should be easy enough to fix.  
-You can set a level limit in qst companion to switch to the next toon at 50.   
+Qst and companion should take you to 50 period. Some people prefer to unlock Brayflox's Longstop then level with Autoduty/ADS. 
+You can set a level limit in qst companion to switch to the next toon at 50.
+Before you set it to 50 though, you should [unlock leves](https://ffxiv.consolegameswiki.com/wiki/Levequest#Unlock) on all toons so leves accumulate while the rest of leveling happens.
+
+## Unlocking retainers
+QST Companion can do it on all toons, recommended to do it after leveling. Henchman can also do it. More on how to use them in [Retainer Management](#retainer-management).
+ 
 ## GC ranks
-You will need seals, later ranks also need the GC hunt log 1&2. Seals are best collected via Expert Delivery. Until you have it unlocked, you should use CBT's Enforce Expert Delivery option. (This predates AR folding Deliveroo in; AR's own rank-check override is described below, and is the more likely thing you'd reach for now.)
+You will need seals, later ranks also need the GC hunt log 1&2. Seals can be quickly acquired via Expert Delivery, if you have green gear. Until you have it unlocked, you can use XA-Slave's GC rank option (author recommends setting lodestone to private, I made a [browser script](https://github.com/barnicskolaci/lodestone-privatizer))
+Barring that, Battlevest or GC delivery missions if you have the time and resources. 
 
-**Get every toon to rank 6, and treat it as mandatory rather than a nice-to-have (added 18 AUG 2026).** AutoRetainer will not run Expert Delivery below GC rank 6 — the check is `GetRank() >= 6` and it is the first thing `CanExpertDeliver()` tests, before any of your delivery triggers are even looked at. Below rank 6 the plugin quietly does nothing at the GC forever: no turnin, no seal spending, no venture purchases. It does not warn you.
+**At a minimum, get every toon to rank 6.** AutoRetainer will not run Expert Delivery below GC rank 6 — it runs out of ventures then quietly does nothing at the GC forever: no turnin, no seal spending, no venture purchases. It does not warn you, you'll just see your toons low on ventures and disabled in multi.
 
-There *is* an override — `/ays set IgnoreGCRankCheck true`, also in AR's Advanced/Debug section as "Ignore GC rank check for MM delivery" — but AR's own troubleshooting page lists it as a **misconfiguration** and tells you to turn it off for normal operation. Treat it as a diagnostic, not a fix. Rank up instead.
-
-This is the single most expensive thing in this guide to get wrong, because the farm looks healthy the whole time it's happening. See [Field report](#field-report-a-352-toon-farm-18-aug-2026).
 # Leveling your retainer class
 
+- A retainer can only be assigned a class **you have unlocked yourself**, and its level is **capped by your own highest level in that class**. Levelling the retainer means levelling yourself first, always.
+- Best way to level them up is level 1 exploration then level 5 exploration then QV to max (QST companion does it automatically).
+- The class decides what it can bring back. MIN/BTN are the pick if you want specific sellable mats or you're feeding submersible builds; combat classes return monster parts (meats, skins) gatherers can't touch. You need to gather each item manually before your retainer can be sent for it and gearing your toons may be necessary. More info on [targeted ventures](https://ffxiv.consolegameswiki.com/wiki/Fishing_(Retainer_Ventures)).
+- **Changing a retainer's class permanently destroys the EXP it accumulated on the old one.** You can restart however if you can spare the ventures and want a different class long-term. 
+  
 ## Botanist/Miner
 
-Untested here — this farm went all-in on Fisher, so I have no measured numbers for it. What's worth knowing before you pick:
+Not personally tested, so I have no measured numbers for it. What's worth knowing before you pick:
 
-- A retainer can only be assigned a class **you have unlocked yourself**, and its level is **capped by your own highest level in that class**. Levelling the retainer means levelling yourself first, always.
-- The class decides what it can bring back. MIN/BTN are the pick if you want specific sellable mats or you're feeding submersible builds; combat classes return monster parts (meats, skins) gatherers can't touch.
-- **Changing a retainer's class permanently destroys the EXP it accumulated on the old one.** In practice this is a one-way decision — make it before you sink ventures into anything.
+- Subs can be even more expensive without being able to gather materials yourself. If you run subs and do not have enough gatherer retainers, you (probably) should.
+- GC delivery and supply missions make this comparable speed to fishing on large scale. But it does need you to get and distribute the items for it.
 
-If you've done MIN/BTN at scale, tell me and I'll write this section properly.
+If you've done MIN/BTN at scale, feel free to PR/message with the advice.
 
 ## Fisher
 
-Fisher is faster and/or cheaper than any other class to do. The downside is that it has basically no use outside of quick ventures. If you have no subs and don't care about getting/selling specific valuable mats then this is your class.
+Fisher is a flexible option and can be faster and/or cheaper than any other class to do. The downside is that it has basically no use outside of quick ventures. If you have no subs and don't care about getting/selling specific valuable mats then this is your class.
 
 ### 1-30
 
-You unlock FSH in Limsa, do your class quests till you unlock ocean fishing, then start with the Limsa leves.
+You unlock FSH in Limsa, do your class quests till you unlock ocean fishing, then start with the Limsa leves. QST priority list can be shared between accounts (mine contains all for MRD/Immortal Flames.
 
-**Answered 18 AUG 2026:** it's the Limsa levemete **Tmokkri** (NPC `1000970`), fisher leves, run until 30. Fish come from the vendor (Lominsan Anchovy, finger shrimp, coral butterfly), so no retainer supply needed for this stage. Take **two leves per bracket** here — unlike Costa, you're not budgeting a scarce fish, so grabbing both is a straight time save.
+```qst:priority:MzExOzMxMzszMTQ7Njk3OzExMDY7OTIxOzY5Mzs2OTY7MTEzNDsxMTA3OzExMDg7Mzg0Mw==```
+
+(needs update with dev dll or PR sent to Ice) **Answered 18 AUG 2026:** it's the Limsa levemete **Tmokkri** (NPC `1000970`), fisher leves, run until 30. Fish come from the vendor (Lominsan Anchovy, finger shrimp, coral butterfly), or manual fishing/marketboard so no retainer supply needed for this stage. Take **two leves per bracket** here — unlike Costa, you're not budgeting a scarce fish, so grabbing both is a straight time save.
 
 Priority order (highest first, and priority order *is* the accept-fallback order — take the top one being offered, else the next):
 
@@ -158,16 +151,15 @@ Priority order (highest first, and priority order *is* the accept-fallback order
 | 1 | Soup to Guts / A Kelping Hand / Cloud Cutlet |
 | skip | Yummy in the Tummy, Fish by Many Other Names, Just Add Water, Brain Candy |
 
-Under 40 leves was the right guess.
-
 ### 30-90: Costa Leves
 For the main bulk of levelling, the ~~best~~ popular way is to get fish with retainers and use them for Costa Del Sol leves.  
 3/4 fish can be gathered with retainers. To get the max yield you want your gathering retainers geared — still need to pin down the exact item/vendor, so treat this as "buy the best FSH main hand you can hand them" for now.  
-> If you don't have any, you can ask others to sell it to you in #housing-deployables or find my listings on Sophia (OCE) (DM/tag me if sold out).
+> If you don't have any, you can ask others to sell it to you in #housing-deployables or look at mb [listings](https://universalis.app/market/4892), OCE often has them at fair price.
 
 ![image](https://github.com/user-attachments/assets/bd82c03a-8ce7-4b45-885d-5d539c6801f3)  
 
 For this you'll need 156 leves with preferred world bonus, double that without.
+(!small calculation error needs correcting)
 <details>
     <summary>Details</summary>
     Average leve is 50% × Black Sole XP(+100% if preferred world) × 3 + 50% × other XP(+100% if preferred world) <br>  
@@ -181,7 +173,7 @@ _Friendly note: you can stop at an earlier level, since you'll need to do the re
 Prioritise Black Sole in ChilledLeves.  
 Since 1/6th of the time you can choose between Tuna and Herring their ratio can vary between 2:1 and 1:2.
 
-**Answered 18 AUG 2026:** ChilledLeves' leve priorities *are* the fallback order, so you set it once and the ratio takes care of itself. Levemete **Nahctahr** (NPC `1004344`), fisher, run until 89:
+(only on dev build/after PR)**Answered 18 AUG 2026:** ChilledLeves' leve priorities *are* the fallback order, so you set it once and the ratio takes care of itself. Levemete **Nahctahr** (NPC `1004344`), fisher, run until 89:
 
 | Prio | Leve | Fish |
 |-|-|-|
@@ -198,9 +190,14 @@ If you're going all the way, you'll need 156 Ash Tuna, 78 Indigo Herring, 702 Bl
 If you're not gathering, you can buy either fish as long as both are at least 78 and add up to 234.  
 
 ### Any level: Ocean Fishing
-If for some reason leves are no longer viable for you, either cause you've hit 90, don't have fish or gil to buy it or anything else, ocean fishing is a good way to level.  
-Every 2 hours you can do it for 22 min, use F.U.T.A or some other script to start it when it's up and fish with AutoHook from puni.sh using the presets.  
-The downside is it's only every 2 hours, so solely relying on this for levelling will add about day per toon until you're done, but it is completely afk at least.  
+If for some reason leves are not viable for you, either cause you've hit 90, don't have fish or gil to buy it or anything else, ocean fishing is a good way to level.  
+Every 2 hours you can do it for 22 min, use Vermaxion to start it when it's up and fish with AutoHook from puni.sh using the [leveling preset](https://github.com/PunishXIV/AutoHook/wiki/TESTING-PRESETS#ocean-fishing-lower-leveling-all-zones).
+
+```
+AH6_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
+```
+
+The downside is it's only every 2 hours, so solely relying on this for levelling will add about day (! ??) per toon until you're done.
 ![image](https://github.com/user-attachments/assets/6c9f87ef-742b-48dc-a4b8-6b00bf3bc3f1)
 
 ## Combat

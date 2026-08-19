@@ -234,7 +234,7 @@ Conditions 2, 3 and 4 interact into a deadlock you can't get out of by waiting: 
 Symptoms you're in it:
 - Seal balances rising instead of hovering near zero.
 - Venture counts in single digits across most toons.
-- AR disabling toons on its own — a toon with no tokens has nothing to do, so it drops out of rotation. Fleet-wide it looks exactly like a plugin bug. It isn't one.
+- AR disabling toons on its own. Careful with this one: AR drops a character from rotation unless *all* of home world matching, venture tokens >= enabled retainers x 2, at least 2 free inventory slots, **and a reachable summoning bell** hold. Low tokens is only one of the four, and measured on this farm it was the *minority* cause — see [Bells and parking](#bells-and-parking). Fleet-wide it looks like a plugin bug either way. It isn't one.
 
 Your seal cap also rises with GC rank, so a low-rank farm wastes income faster whenever it stalls.
 
@@ -262,7 +262,13 @@ Retainers gain EXP only from ventures, and cap at **your own** level in their cl
 
 ## Bells and parking
 
-Retainer work only happens at a Summoning Bell, which is why every AR routine is location-bound. Inn rooms are the reliable option (no housing needed, no wandering players). Park toons at a bell before you expect AR to process them, or you're paying teleport time on every single relog.
+Retainer work only happens at a Summoning Bell, which is why every AR routine is location-bound. This is worth more of your attention than it sounds, because AR silently disables any character that can't reach one.
+
+**Park in an inn, not in a city.** AR only widens its bell search radius when the zone is an inn (or a workshop). In an open city zone the radius is small, so a toon standing a few paces from a perfectly good Ul'dah or Limsa bell fails the check and gets dropped from rotation — while looking, to you, like it's standing right next to a bell. Measured on this farm: of 272 self-disabled toons, ~229 had tokens, inventory and home world all fine and were failing purely on this.
+
+There's no setting that turns the bell requirement off. The only in-game alternative is Property Teleport, which needs private/FC/apartment ownership — so if your toons are estate-less, inn parking isn't a workaround, it's *the* answer.
+
+Note also that where a toon spawns isn't AR's choice: it only asks Lifestream to switch character, and the server puts each one back wherever it last logged out. So a fleet that drifts out of inns stays drifted until you re-park it.
 
 # Miscellanious
 
@@ -311,7 +317,7 @@ The damage in numbers:
 - Venture sends per day peaked at **12,382** (31 JUL), held ~10k/day through early August, and fell to **424** on 17 AUG. That's ~3% of peak. The farm was living off a token stockpile the whole time and slowly eating it.
 - **334 of 352 toons hold fewer than 4 venture tokens. 94 hold zero.**
 - 2.44M seals sat unspendable. At 200 seals a token that's **~12,200 ventures** — a full day of peak fleet output, earned and paid for, never collected.
-- **179 of 352 toons had disabled themselves in AR.** A toon with no tokens has nothing to do, so AR drops it from rotation. It reads exactly like a plugin bug. It is not a plugin bug.
+- **179 of 352 toons had disabled themselves in AR.** Worth separating from the famine, because it turned out to be mostly a *different* fault: on a later 272-toon sample, ~229 had tokens, inventory and world all fine and were failing the **summoning bell** check, against only 42 actually below the token threshold. Both roads lead to a stalled toon; only one of them is the venture famine.
 - Once tokens hit zero the deadlock locked: no tokens -> no quick ventures -> no gear -> nothing deliverable -> no GC trip. Even at rank 6 that last loop would have needed an outside push to restart.
 
 Nothing in any log said "you are not buying ventures". No warning fired for being under the rank requirement. The only visible signal was seals going up instead of down — which is the one thing that looks like success.

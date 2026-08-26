@@ -362,13 +362,13 @@ If you wanna spend time selling fc points, they are worth 1-2 gil via **cereleum
 529 = 529 x 1 fc points
 2994/qv or 2.19m/month
 
-Gil per quick venture (7.2):
-720 = 1200 x 0.6 from seals
+Gil per quick venture (7.5):
+858 = 1300 x 0.6 x 1.1 from seals +10% FC buff
 2910 = 3% x 9.7% x 2 x 500k from dyes
-3630/qv or 2.65m/month
+3768/qv or 2.75m/month
 
-With FC points: 529 = 529 x 1 fc points
-4159/qv or 3.04m/month
+With FC points: 855 = 570 x 1.5 fc points
+4623/qv or 3.37m/month
 
 On top of this you will also get items to sell, most of which are going to be vendored, because it's a hassle to sell manually. Just add anything worth less than 20k-50k to your AR sell list.
 

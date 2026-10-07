@@ -4,7 +4,7 @@
 Plans and tips for making (many) retainers in FFXIV  
 by Friendly
 
-***still heavily work in progress***
+***still work in progress***
 
 To find things easily, use the Outline or Ctrl + F  
 ![image](https://github.com/user-attachments/assets/e44bc4d0-d814-4494-8fbb-d1a8990fed8e)
